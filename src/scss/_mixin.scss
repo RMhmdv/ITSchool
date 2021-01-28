@@ -8,3 +8,11 @@
     src: url('../fonts/#{$url}.woff2') format('woff2'), url('../fonts/#{$url}.woff') format('woff');
   }
 }
+
+// * Display Flex Center Between
+
+@mixin dfcb() {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
