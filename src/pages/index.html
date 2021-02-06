@@ -1,9 +1,204 @@
-@@include("blocks/_header.html", 
-   {
-    "title": "BigProject",
-    "desc": "IT School"
-   }
-)
+@@include('blocks/_header.html')
 
+<section class="main-content">
+    <div class="main-content__header">
+        <div class="main-content__header-text">
+            <h1>Привет, username!</h1>
+            <h5>Рад, что ты снова зашел</h5>
+        </div>
+        <div class="main-content__header-image">
+            <img src="../img/header-img.svg" alt="Hi!">
+        </div>
+    </div>
+    <div class="main-content__my-course">
+        <div class="main-content__my-course-name">
+            <img src="../img/spanish.svg" alt="spanish">
+            <div class="main-content__my-course-name--title">
+                <h6>Испанский язык</h6>
+                <p>Автор: Alejandro Velazquez</p>
+            </div>
+        </div>
+        <div class="main-content__my-course-progress">
+            <img src="../img/progress.svg" alt="progress">
+            <button class="first-button">Продолжить</button>
+        </div>
+    </div>
+    <div class="main-content__filter">
+        <h3 class="main-content__filter-title">Курсы</h3>
 
+        <a href="#0" class="filter main-content__filter-link" data-filter="all" data-sort="default">Все курсы
+        </a>
+        <a href="#0" class="filter main-content__filter-link" data-sort="time:desc">Новые </a>
+        <a href="#0" class="filter main-content__filter-link" data-sort="rating:desc"> Самые популярные</a>
+
+        <div class="main-content__filter-container">
+            <div class="mix main-content__filter-container-element" data-time="2020-04-04 20:53:32" data-rating="4.9">
+                <div class="main-content__filter-container-element--name">
+                    <img src="../img/figma.svg" alt="figma">
+                    <div class="main-content__filter-container-element--name--title">
+                        <h6>Figma с нуля</h6>
+                        <p>Автор: Christopher Morgan</p>
+                    </div>
+                </div>
+                <div class="main-content__filter-container-element--time">
+                    <img src="../img/time.svg" alt="time">
+                    <p>6ч 30мин</p>
+                </div>
+                <div class="main-content__filter-container-element--progress">
+                    <div>
+                        <img src="../img/mark.svg" alt="progress">
+                        <p>4,9</p>
+                    </div>
+                    <button class="second-button">О курсе</button>
+                </div>
+            </div>
+            <div class="mix main-content__filter-container-element" data-time="2022-03-06 10:50:32" data-rating="4.4">
+                <div class="main-content__filter-container-element--name">
+                    <img src="../img/figma.svg" alt="figma">
+                    <div class="main-content__filter-container-element--name--title">
+                        <h6>Figma с нуля</h6>
+                        <p>Автор: Christopher Morgan</p>
+                    </div>
+                </div>
+                <div class="main-content__filter-container-element--time">
+                    <img src="../img/time.svg" alt="time">
+                    <p>6ч 30мин</p>
+                </div>
+                <div class="main-content__filter-container-element--progress">
+                    <div>
+                        <img src="../img/mark.svg" alt="progress">
+                        <p>4,9</p>
+                    </div>
+                    <button class="second-button">О курсе</button>
+                </div>
+            </div>
+            <div class="mix main-content__filter-container-element" data-time="2012-04-04 10:20:32" data-rating="2.3">
+                <div class="main-content__filter-container-element--name">
+                    <img src="../img/figma.svg" alt="figma">
+                    <div class="main-content__filter-container-element--name--title">
+                        <h6>Figma с нуля</h6>
+                        <p>Автор: Christopher Morgan</p>
+                    </div>
+                </div>
+                <div class="main-content__filter-container-element--time">
+                    <img src="../img/time.svg" alt="time">
+                    <p>6ч 30мин</p>
+                </div>
+                <div class="main-content__filter-container-element--progress">
+                    <div>
+                        <img src="../img/mark.svg" alt="progress">
+                        <p>4,9</p>
+                    </div>
+                    <button class="second-button">О курсе</button>
+                </div>
+            </div>
+            <div class="mix main-content__filter-container-element" data-time="1992-04-03 18:50:42" data-rating="6.9">
+                <div class="main-content__filter-container-element--name">
+                    <img src="../img/figma.svg" alt="figma">
+                    <div class="main-content__filter-container-element--name--title">
+                        <h6>Figma с нуля</h6>
+                        <p>Автор: Christopher Morgan</p>
+                    </div>
+                </div>
+                <div class="main-content__filter-container-element--time">
+                    <img src="../img/time.svg" alt="time">
+                    <p>6ч 30мин</p>
+                </div>
+                <div class="main-content__filter-container-element--progress">
+                    <div>
+                        <img src="../img/mark.svg" alt="progress">
+                        <p>4,9</p>
+                    </div>
+                    <button class="second-button">О курсе</button>
+                </div>
+            </div>
+            <div class="mix main-content__filter-container-element" data-time="2000-03-07 10:50:32" data-rating="1.9">
+                <div class="main-content__filter-container-element--name">
+                    <img src="../img/figma.svg" alt="figma">
+                    <div class="main-content__filter-container-element--name--title">
+                        <h6>Figma с нуля</h6>
+                        <p>Автор: Christopher Morgan</p>
+                    </div>
+                </div>
+                <div class="main-content__filter-container-element--time">
+                    <img src="../img/time.svg" alt="time">
+                    <p>6ч 30мин</p>
+                </div>
+                <div class="main-content__filter-container-element--progress">
+                    <div>
+                        <img src="../img/mark.svg" alt="progress">
+                        <p>4,9</p>
+                    </div>
+                    <button class="second-button">О курсе</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="profile-information">
+    <div class="profile-information__header">
+        <div class="profile-information__header-search">
+            <form action="">
+                <input type="submit" value="">
+                <input type="search" placeholder="Введи название курса">
+            </form>
+        </div>
+        <div class="profile-information__header-prifile">
+            <div class="profile-information__header-prifile--dropdown">
+                <img src="../img/profile-img.svg" onclick="myFunction()" class="dropbtn">
+                <div id="myDropdown" class="dropdown__content">
+                    <a href="#"><img src="../img/profile.svg" alt="profile">
+                        <p class="dropdown__content-text">
+                            <span>А</span><span>к</span><span>к</span><span>а</span><span>у</span><span>н</span><span>т</span>
+                        </p>
+                    </a>
+                    <a href="#"><img src="../img/settings.svg" alt="setting">
+                        <p class="dropdown__content-text">
+                            <span>Н</span><span>а</span><span>с</span><span>т</span><span>р</span><span>о</span><span>й</span><span>к</span><span>и</span>
+                        </p>
+                    </a>
+                    <a href="#"><img src="../img/log-out.svg" alt="log-out">
+                        <p class="dropdown__content-text">
+                            <span>В</span><span>ы</span><span>й</span><span>т</span><span>и</span>
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="profile-information__progress">
+        <div class="profile-information__progress-ready">
+            <h3 class="profile-information__progress--count">11</h3>
+            <p class="profile-information__progress--name">Завершено курсов</p>
+        </div>
+        <div class="profile-information__progress-active">
+            <h3 class="profile-information__progress--count">4</h3>
+            <p class="profile-information__progress--name">Активных курсов</p>
+        </div>
+    </div>
+
+    <div class="profile-information__statistic">
+        <h3 class="profile-information__statistic-title">
+            Ваша статистика
+        </h3>
+        <h4 class="profile-information__statistic-subtitle">Ваша статистка за неделю</h4>
+        <img class="profile-information__statistic-image" src="../img/statistics.svg" alt="statistics">
+    </div>
+
+    <div class="profile-information__more-curces">
+        <h3 class="profile-information__more-curces-title">Еще больше курсов</h3>
+        <div class="profile-information__more-curces-content">
+            <div class="profile-information__more-curces-content--text">
+                <p>Открой доступ ко всей базе курсов за $
+                    9,99 / месяц</p>
+                <button class="first-button">Подписка</button>
+            </div>
+            <img src="../img/more-curses-img.svg" alt="more-curses">
+        </div>
+    </div>
+</section>
+
+</section>
 @@include("blocks/_footer.html")

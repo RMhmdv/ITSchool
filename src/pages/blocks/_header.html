@@ -1,9 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@@title</title>
-    <meta name="description" content="@@desc">
-    @@include("_meta.html")
+    <link rel="shortcut icon" href="./img/logo.svg" type="img/svg">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
 </head>
+
+<body>
+    <section class="wrapper">
+        <section class="main-navigation">
+
+            <nav class="main-navigation__nav">
+                <div class="main-navigation__logo"><a href="#"><img src="./img/logo.svg" alt="logo"
+                            class="logo-img"></a>
+                </div>
+                <ul class="main-navigation__nav-list">
+                    <li class="main-navigation__nav-list--item">
+                        <a href="#" class="item" title="Главная">
+                            <img src="../img/home.svg" alt="home">
+                        </a>
+                    </li>
+                    <li class="main-navigation__nav-list--item">
+                        <a href="#" class="item" title="Курсы">
+                            <img src="../img/more-curses.svg" alt="more-curses">
+                        </a>
+                    </li>
+                    <li class="main-navigation__nav-list--item">
+                        <a href="#" class="item" title="Аккаунт">
+                            <img src="../img/profile.svg" alt="profile">
+                        </a>
+                    </li>
+                    <li class="main-navigation__nav-list--item">
+                        <a href="#" class="item" title="Оповещения">
+                            <img src="../img/masseges.svg" alt="masseges">
+                        </a>
+                    </li>
+                    <li class="main-navigation__nav-list--item">
+                        <a href="#" class="item" title="Настройки">
+                            <img src="../img/settings.svg" alt="settings">
+                        </a>
+                    </li>
+                </ul>
+                <div class="main-navigation__log-out">
+                    <a href="#" class="main-navigation__log-out-item" title="Выход">
+                        <img src="../img/log-out.svg" alt="log-out">
+                    </a>
+                </div>
+            </nav>
+        </section>
+        <div class="hamburger-menu">
+            <input id="menu__toggle" type="checkbox" />
+            <label class="menu__btn" for="menu__toggle">
+                <span></span>
+            </label>
+            <ul class="menu__box">
+                <li>
+                    <img src="./img/logo.svg" alt="logo" class="logo-img">
+                </li>
+                <li><a class="menu__item" href="#">
+                        <img src="../img/home.svg" alt="home">
+                        <p>Главная</p>
+                    </a></li>
+                <li><a class="menu__item" href="#">
+                        <img src="../img/more-curses.svg" alt="more-curses">
+                        <p>Курсы</p>
+                    </a></li>
+                <li><a class="menu__item" href="#">
+                        <img src="../img/profile.svg" alt="profile">
+                        <p>Аккаунт</p>
+                    </a></li>
+                <li><a class="menu__item" href="#">
+                        <img src="../img/masseges.svg" alt="masseges">
+                        <p>Оповещения</p>
+                    </a></li>
+                <li><a class="menu__item" href="#">
+                        <img src="../img/settings.svg" alt="settings">
+                        <p>Настройки</p>
+                    </a></li>
+                <li><a class="menu__item" href="#">
+                        <img src="../img/log-out.svg" alt="log-out">
+                        <p>Выйти</p>
+                    </a></li>
+            </ul>
+        </div>
