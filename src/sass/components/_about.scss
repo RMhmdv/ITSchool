@@ -1,0 +1,38 @@
+.about-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 8fr 2fr;
+    grid-template-areas: "about-picture1 about-content about-picture2";
+    grid-gap: 10;
+    align-items: center;
+}
+
+.picture1 {
+    grid-area: about-picture1;
+}
+
+.about-content  {
+    grid-area: about-content;
+}
+
+.picture2 {
+    grid-area: about-picture2;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.features__list {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 60px;
+}
+
+.card-item {
+display: flex;
+    flex-direction: column;
+    max-width: 140px;
+    align-items: center;
+}

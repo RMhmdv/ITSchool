@@ -1,0 +1,21 @@
+/*
+ * Все паршалы импортировать в этот файл
+ */
+
+@import 'normalize.scss';
+@import 'base.scss';
+
+@import 'vars';
+@import 'mixin';
+@import 'fonts';
+@import 'basic';
+
+@import 'components/button';
+@import 'components/header';
+@import 'components/hero';
+@import 'components/about';
+@import 'components/stats';
+@import 'components/feedback';
+@import 'components/faq';
+@import 'components/price';
+@import 'components/footer';

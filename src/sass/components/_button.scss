@@ -1,0 +1,68 @@
+.button {
+  text-decoration: none;
+  display: inline-flex;
+  padding: 13px 20px;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  font-family: $secondary-font-family;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  &--primary {
+    background-color: $accent-color2;
+    color: $title-text-color;
+    font-size: 1em;
+    border-radius: 8px;
+    border: 1px solid $title-text-color;
+
+    &:hover {
+      text-decoration: none;
+      color: $accent-color;
+      border: 1px solid $accent-color;
+      background-color: darken($accent-color2, 10%);
+    }
+  }
+
+  &--secondary {
+    background-color: $title-text-color;
+    color: $accent-color2;
+    padding: 15px 40px;
+    font-size: 1em;
+    border: 1px solid $title-text-color;
+
+    &:hover {
+      text-decoration: none;
+      background-color: lighten($title-text-color, 10%);
+    }
+  }
+
+  &--secondary2 {
+    background-color: $accent-color;
+    color: $accent-color2;
+    padding: 15px 40px;
+    font-size: 1em;
+    border: 1px solid $accent-color;
+
+    &:hover {
+      text-decoration: none;
+      background-color: darken($accent-color, 10%);
+    }
+  }
+
+  &--price {
+    background-color: $primary-bg-color;
+    color: $btn-text-color;
+    padding: 13px 20px;
+    width: 174px;
+    font-size: 1em;
+    border-radius: 2px;
+    border: 1px solid $accent-color;
+    box-shadow: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+    &:hover {
+      text-decoration: none;
+      background-color: darken($accent-color, 10%);
+    }
+  }
+}
