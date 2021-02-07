@@ -2,13 +2,13 @@
  * Все паршалы импортировать в этот файл
  */
 
-@import 'normalize.scss';
-@import 'base.scss';
+@import './base/normalize.scss';
+@import './base/basic';
 
-@import 'vars';
-@import 'mixin';
-@import 'fonts';
-@import 'basic';
+
+@import './utils/vars';
+@import './utils/mixin';
+@import './utils/fonts';
 
 @import 'components/button';
 @import 'components/header';
