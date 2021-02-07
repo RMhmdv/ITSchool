@@ -1,0 +1,15 @@
+.stats-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+}
+
+.stats__card {
+    display: flex;
+    flex-direction: column;
+    max-width: 260px;
+    align-items: flex-end;
+}
+
+.even {
+    align-items: start;
+}

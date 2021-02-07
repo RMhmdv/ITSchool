@@ -3,19 +3,17 @@
  */
 
 @import './base/normalize.scss';
-@import './base/basic';
-
-
 @import './utils/vars';
+@import './base/basic';
 @import './utils/mixin';
 @import './utils/fonts';
 
-@import 'components/button';
-@import 'components/header';
-@import 'components/hero';
-@import 'components/about';
-@import 'components/stats';
-@import 'components/feedback';
-@import 'components/faq';
-@import 'components/price';
-@import 'components/footer';
+@import './components/button';
+@import './components/header';
+@import './components/hero';
+@import './components/about';
+@import './components/stats';
+@import './components/feedback';
+@import './components/faq';
+@import './components/price';
+@import './components/footer';

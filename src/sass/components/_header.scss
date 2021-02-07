@@ -2,15 +2,15 @@
   padding-top: 16px;
   padding-bottom: 16px;
 
-  color: inherit;
+  // color: inherit;
   background-color: $accent-color2;
   font-weight: 500;
   text-shadow: 0px 0px 5px #E6E6E6;
 
-  @media (max-width: 574px) {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
+  // @media (max-width: 574px) {
+  //   padding-top: 10px;
+  //   padding-bottom: 10px;
+  // }
 
   &__wrapper {
     display: grid;
