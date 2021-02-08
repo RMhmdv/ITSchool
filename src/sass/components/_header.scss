@@ -26,6 +26,23 @@
     grid-area: header-btn;
   }
 
+  .menu {
+
+  &__nav {
+    @include dfcb();
+    justify-content: space-between;
+  }
+
+  @media (max-width: 1179px) {
+    width: 100%;
+  }
+
+  @media (max-width: 574px) {
+    display: none;
+  }
+}
+
+
 &__menu {
   display: grid;
   grid-template-columns: repeat(4, auto);
