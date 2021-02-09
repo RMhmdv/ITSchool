@@ -9,12 +9,25 @@ html {
 }
 
 body {
+
     font-family: $primary-font-family;
     background-color: $accent-color2;
     color: $primary-text-color;
     &.no-scroll {
         overflow: hidden;
     }
+
+  font-family: $primary-font-family;
+  background-color: $accent-color2;
+  color: $title-text-color;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  text-align: center;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
+
 }
 
 img {

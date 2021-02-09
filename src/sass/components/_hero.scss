@@ -1,12 +1,20 @@
-.hero-section__container {
+.hero-section {
+    background-color: $primary-bg-color;
+
+    &__container {
     padding-top: 130px;
     padding-bottom: 110px;
+}
 }
 
 .hero__content {
     display: block;
     width: 700px;
     margin: 0 auto;
+
+    .section-text {
+        width: 634px;
+    }
 }
 .section-title {
     margin-bottom: 35px;

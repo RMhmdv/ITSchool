@@ -1,10 +1,12 @@
+.footer__container {
+  text-align: left;
+}
 .footer {
   padding-top: 90px;
   padding-bottom: 90px;
 
   color: inherit;
   background-color: $accent-color2;
-  font-family: $footer-font-family;
   font-weight: 500;
   text-shadow: 0px 0px 5px #E6E6E6;
 
@@ -13,12 +15,15 @@
     padding-bottom: 70px;
   }
 
-  &__wrapper {
+   &__wrapper {
     display: grid;
     grid-template-columns: 2fr 5fr 1fr;
     grid-template-areas: "footer-logo footer-menu footer-btn";
     align-items: center;
+    color: $title-text-color;
+
   }
+
 
   &__logo {
     grid-area: footer-logo;
@@ -30,9 +35,8 @@
   &__btn {
     grid-area: footer-btn;
   }
-}
 
-.menu {
+  .menu {
 
   &__nav {
     @include dfcb();
@@ -48,6 +52,44 @@
   }
 }
 
-.text-footer {
-  margin-top: 25px;
+
+&__menu {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 30px;
+  font-family: $primary-font-family;
+  font-size: 12px;
+  color: inherit;
+
+  // @media (max-width: 1179px) {
+  //   width: 100%;
+  // }
+
+  @media (max-width: 574px) {
+    display: none;
+  }
 }
+
+.header__menu-link {
+  color: inherit;
+  cursor: pointer;
+}
+.current {
+  color: $accent-color;
+}
+
+.cd-signup {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+}
+
+.text-footer {
+  display: block;
+  margin-top: 25px;
+  font-family: $footer-font-family;
+  font-size: 12px;
+  align-items: start;
+}
+
