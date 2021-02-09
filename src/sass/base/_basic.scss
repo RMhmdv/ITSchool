@@ -11,7 +11,9 @@ html {
 body {
   font-family: $primary-font-family;
   background-color: $accent-color2;
-  color: $primary-text-color;
+  color: $title-text-color;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
 
   &.no-scroll {
     overflow: hidden;

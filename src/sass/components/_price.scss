@@ -14,7 +14,14 @@
     margin: 0 auto;
 }
 .section-title {
+    color: inherit;
     margin-bottom: 35px;
+}
+
+.section-text {
+    margin-bottom: 70px;
+    font-family: $secondary-font-family;
+    font-size: 15px;
 }
 
 .button--price {

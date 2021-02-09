@@ -2,21 +2,17 @@
   padding-top: 16px;
   padding-bottom: 16px;
 
-  // color: inherit;
   background-color: $accent-color2;
   font-weight: 500;
   text-shadow: 0px 0px 5px #E6E6E6;
-
-  // @media (max-width: 574px) {
-  //   padding-top: 10px;
-  //   padding-bottom: 10px;
-  // }
 
   &__wrapper {
     display: grid;
     grid-template-columns: 2fr 5fr 1fr;
     grid-template-areas: "header-logo header-menu header-btn";
     align-items: center;
+    color: $title-text-color;
+
   }
 
   &__logo {
@@ -29,9 +25,8 @@
   &__btn {
     grid-area: header-btn;
   }
-}
 
-.menu {
+  .menu {
 
   &__nav {
     @include dfcb();
@@ -47,3 +42,35 @@
   }
 }
 
+
+&__menu {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 30px;
+  font-family: $primary-font-family;
+  font-size: 12px;
+  color: inherit;
+
+  // @media (max-width: 1179px) {
+  //   width: 100%;
+  // }
+
+  @media (max-width: 574px) {
+    display: none;
+  }
+}
+
+.header__menu-link {
+  color: inherit;
+  cursor: pointer;
+}
+.current {
+  color: $accent-color;
+}
+
+.cd-signup {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+}
