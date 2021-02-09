@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="IT School">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Admin</title>
+</head>
+
+<body>
+
+    <section class="admin__container">
+        <div class="left">
+            <div class="admin__nav">
+                <div class="logo">
+                    <a class="logo__link" href="/">
+                        <img class="logo__img" src="images/icon/logo-admin.svg" alt="logo">
+                    </a>
+                </div>
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="admin.html" class="nav__link">
+                            <img class="nav__icon" src="images/icon/home.svg" alt="home">
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">
+                            <img class="nav__icon" src="images/icon/course.svg" alt="course">
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">
+                            <img class="nav__icon" src="images/icon/user.svg" alt="user">
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">
+                            <img class="nav__icon" src="images/icon/mail.svg" alt="mail">
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">
+                            <img class="nav__icon" src="images/icon/setting.svg" alt="setting">
+                        </a>
+                    </li>
+                </ul>
+                <div class="logout">
+                    <a class="logout__link" href="#">
+                        <img class="logout__img" src="images/icon/logout.svg" alt="logout">
+                    </a>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="right">
+            <h2 class="admin__container-title">Панель администратора</h2>
+            <div class="burger-menu__button">
+                <span class="burger-menu__line"></span>
+            </div>
+            <div class="burger-menu">
+                <div class="logo">
+                    <a class="burger-menu_link" href="/">
+                        <img class="logo__img" src="images/icon/logo-admin.svg" alt="logo">
+                    </a>
+                </div>
+                <ul class="burger-menu__list">
+                    <li class="burger-menu__item">
+                        <a href="admin.html" class="burger-menu__link">
+                            <img class="nav__icon" src="images/icon/home.svg" alt="home">
+                        </a>
+                    </li>
+                    <li class="burger-menu__item">
+                        <a href="#" class="burger-menu__link">
+                            <img class="nav__icon" src="images/icon/course.svg" alt="course">
+                        </a>
+                    </li>
+                    <li class="burger-menu__item">
+                        <a href="#" class="burger-menu__link">
+                            <img class="nav__icon" src="images/icon/user.svg" alt="user">
+                        </a>
+                    </li>
+                    <li class="burger-menu__item">
+                        <a href="#" class="burger-menu__link">
+                            <img class="nav__icon" src="images/icon/mail.svg" alt="mail">
+                        </a>
+                    </li>
+                    <li class="burger-menu__item">
+                        <a href="#" class="burger-menu__link">
+                            <img class="nav__icon" src="images/icon/setting.svg" alt="setting">
+                        </a>
+                    </li>
+                </ul>
+                <div class="logout">
+                    <a class="burger-menu__link" href="#">
+                        <img class="logout__img" src="images/icon/logout.svg" alt="logout">
+                    </a>
+                </div>
+                <div class="burger-menu__overlay"></div>
+            </div>
+            <div class="course__container">
+                <h2 class="course__container-title">Курсы</h2>
+                <div class="course__add">
+                    <a class="button button--primary-admin" href="add.html">Добавить курс</a>
+                </div>
+
+                <div class="course__nav">
+                    <a class="filter course__link" data-filter="all" data-sort="default" href="#">Все курсы</a>
+                    <a class="filter course__link" data-sort="time:desc" href="#">Новые</a>
+                    <a class="filter course__link" data-sort="rating:desc" href="#">Самые популярные</a>
+                </div>
+                <div class="course__wrap">
+                    <div class="mix course__single " data-time="2020-04-04 10:59:29" data-rating="4.9">
+                        <div class="course__name">
+                            <div class="course__logo">
+                                <img class="course__logo-img" src="images/icon/figma.svg" alt="course logo">
+                            </div>
+                            <div class="course__info">
+                                <h3 class="course__info-name">Figma с нуля</h3>
+                                <span class="course__info-author">Автор: Christopher Morgan</span>
+                            </div>
+                        </div>
+
+                        <div class="course__time">
+                            <img class="course__time-icon" src="images/icon/clock.svg" alt="icon">
+                            <span class="course__time-duration">6ч 30мин</span>
+                        </div>
+                        <div class="course__rating">
+                            <img class="course__rating-icon" src="images/icon/rating.svg" alt="rating-icon">
+                            <span class="course__rating-score">4,9</span>
+                        </div>
+                        <div class="course__action-btn">
+                            <a class="button button--transparent-admin" href="about-course.html">О курсе</a>
+                            <a class="button button--primary-admin" href="update.html">Изменить курс</a>
+                            <a class="button button--alert">Удалить курс</a>
+                        </div>
+                    </div>
+                    <div class="mix  course__single" data-time="2021-04-04 14:59:29" data-rating="4.7">
+                        <div class="course__name">
+                            <div class="course__logo">
+                                <img class="course__logo-img" src="images/icon/circle.svg" alt="course logo">
+                            </div>
+                            <div class="course__info">
+                                <h3 class="course__info-name">Основы фотографии</h3>
+                                <span class="course__info-author">Автор: Gordon Norman</span>
+                            </div>
+                        </div>
+
+                        <div class="course__time">
+                            <img class="course__time-icon" src="images/icon/clock.svg" alt="icon">
+                            <span class="course__time-duration">3ч 15мин</span>
+                        </div>
+                        <div class="course__rating">
+                            <img class="course__rating-icon" src="images/icon/rating.svg" alt="rating-icon">
+                            <span class="course__rating-score">4,7</span>
+                        </div>
+                        <div class="course__action-btn">
+                            <a class="button button--transparent-admin" href="about-course.html">О курсе</a>
+                            <a class="button button--primary-admin" href="update.html">Изменить курс</a>
+                            <a class="button button--alert">Удалить курс</a>
+                        </div>
+                    </div>
+                    <div class="mix course__single" data-time="2019-04-04 20:59:29" data-rating="4.6">
+                        <div class="course__name">
+                            <div class="course__logo">
+                                <img class="course__logo-img" src="images/icon/insta.svg" alt="course logo">
+                            </div>
+                            <div class="course__info">
+                                <h3 class="course__info-name">Мастер Instagram</h3>
+                                <span class="course__info-author">Автор: Sophie Gill</span>
+                            </div>
+                        </div>
+
+                        <div class="course__time">
+                            <img class="course__time-icon" src="images/icon/clock.svg" alt="icon">
+                            <span class="course__time-duration">7ч 40мин</span>
+                        </div>
+                        <div class="course__rating">
+                            <img class="course__rating-icon" src="images/icon/rating.svg" alt="rating-icon">
+                            <span class="course__rating-score">4,6</span>
+                        </div>
+                        <div class="course__action-btn">
+                            <a class="button button--transparent-admin" href="about-course.html">О курсе</a>
+                            <a class="button button--primary-admin" href="update.html">Изменить курс</a>
+                            <a class="button button--alert">Удалить курс</a>
+                        </div>
+                    </div>
+                    <div class="mix course__single" data-time="2020-04-04 23:59:29" data-rating="4.8">
+                        <div class="course__name">
+                            <div class="course__logo">
+                                <img class="course__logo-img" src="images/icon/pensil.svg" alt="course logo">
+                            </div>
+                            <div class="course__info">
+                                <h3 class="course__info-name">Курсы рисования</h3>
+                                <span class="course__info-author">Автор: Jean Tate</span>
+                            </div>
+                        </div>
+
+                        <div class="course__time">
+                            <img class="course__time-icon" src="images/icon/clock.svg" alt="icon">
+                            <span class="course__time-duration">11ч 30мин</span>
+                        </div>
+                        <div class="course__rating">
+                            <img class="course__rating-icon" src="images/icon/rating.svg" alt="rating-icon">
+                            <span class="course__rating-score">4,8</span>
+                        </div>
+                        <div class="course__action-btn">
+                            <a class="button button--transparent-admin" href="about-course.html">О курсе</a>
+                            <a class="button button--primary-admin" href="update.html">Изменить курс</a>
+                            <a class="button button--alert">Удалить курс</a>
+                        </div>
+                    </div>
+                    <div class="mix course__single" data-time="2020-04-04 11:59:29" data-rating="4.7">
+                        <div class="course__name">
+                            <div class="course__logo">
+                                <img class="course__logo-img" src="images/icon/photshop.svg" alt="course logo">
+                            </div>
+                            <div class="course__info">
+                                <h3 class="course__info-name">Основы Photoshop</h3>
+                                <span class="course__info-author">Автор: David Gree</span>
+                            </div>
+                        </div>
+
+                        <div class="course__time">
+                            <img class="course__time-icon" src="images/icon/clock.svg" alt="icon">
+                            <span class="course__time-duration">5ч 35мин</span>
+                        </div>
+                        <div class="course__rating">
+                            <img class="course__rating-icon" src="images/icon/rating.svg" alt="rating-icon">
+                            <span class="course__rating-score">4,7</span>
+                        </div>
+                        <div class="course__action-btn">
+                            <a class="button button--transparent-admin" href="about-course.html">О курсе</a>
+                            <a class="button button--primary-admin" href="update.html">Изменить курс</a>
+                            <a class="button button--alert">Удалить курс</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    <script src="js/scripts.js">
+    </script>
+</body>
+
+</html>

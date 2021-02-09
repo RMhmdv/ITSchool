@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="IT School">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Admin</title>
+</head>
+
+<body>
+
+    <section class="admin__container">
+        <div class="left">
+            <div class="admin__nav">
+                <div class="logo">
+                    <a class="logo__link" href="/">
+                        <img class="logo__img" src="images/icon/logo-admin.svg" alt="logo">
+                    </a>
+                </div>
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="admin.html" class="nav__link">
+                            <img class="nav__icon" src="images/icon/home.svg" alt="home">
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">
+                            <img class="nav__icon" src="images/icon/course.svg" alt="course">
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">
+                            <img class="nav__icon" src="images/icon/user.svg" alt="user">
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">
+                            <img class="nav__icon" src="images/icon/mail.svg" alt="mail">
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">
+                            <img class="nav__icon" src="images/icon/setting.svg" alt="setting">
+                        </a>
+                    </li>
+                </ul>
+                <div class="logout">
+                    <a class="logout__link" href="#">
+                        <img class="logout__img" src="images/icon/logout.svg" alt="logout">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <h2 class="admin__container-title">Панель администратора</h2>
+            <div class="course__conatiner">
+                <h2 class="course__container-title">Добавить курс</h2>
+                <div class="form__container">
+                    <form class="form" action="">
+                        <label class="form__label" for="name">Имя курса</label>
+                        <input class="form__input" name="name" type="text">
+
+                        <label class="form__label" for="author">Автор </label>
+                        <input class="form__input" name="author" type="text">
+
+                        <label class="form__label" for="">Длительность курса</label>
+                        <input class="form__input " type="text" placeholder="Часи">
+                        <input class="form__input " type="text" placeholder="Минути">
+
+
+                        <label class="form__label" for="rating">Рейтинг</label>
+                        <input class="form__input" name="rating" type="text">
+                        <button class="button button--green">
+ 							Добавить курс
+ 						</button>
+                    </form>
+                </div>
+
+
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js">
+    </script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/scripts.js">
+    </script>
+</body>
+
+</html>
