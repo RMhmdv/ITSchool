@@ -1,5 +1,5 @@
 $(function () {
-	let mixer = mixitup('.main-content__filter-container', {
+	let mixer = mixitup('.filter-wrapper__container', {
 		load: {
 			filter: 'all',
 			sort: 'default'
