@@ -1,3 +1,14 @@
+$(function () {
+	let mixer = mixitup('.filter-wrapper__container', {
+		load: {
+			filter: 'all',
+			sort: 'default'
+		},
+		animation: {
+			duration: 300
+		}
+	})
+});
 /**!
  * MixItUp v3.3.1
  * A high-performance, dependency-free library for animated filtering, sorting and more
@@ -1423,17 +1434,6 @@ window.Modernizr = (function( window, document, undefined ) {
 
 })(this, this.document);
 
-$(function () {
-	let mixer = mixitup('.main-content__filter-container', {
-		load: {
-			filter: 'all',
-			sort: 'default'
-		},
-		animation: {
-			duration: 300
-		}
-	})
-});
 
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
