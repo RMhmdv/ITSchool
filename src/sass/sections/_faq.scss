@@ -1,7 +1,15 @@
+.faq-section {
+    padding-top: 175px;
+    padding-bottom: 175px;
+}
 .faq-wrapper {
-    max-width: 750px;
+    // max-width: 750px;
     margin: 0 auto;
     color: $title-text-color2;
+}
+
+.faq-title {
+    margin-bottom: 70px;
 }
 
 .item {
@@ -10,6 +18,9 @@
     margin-bottom: 20px;
     border-bottom: 1px solid $secondary-bg-color;
     align-items: flex-start;
+    max-width: 750px;
+
+
 
 
     &-text {

@@ -63,14 +63,17 @@ p {
 }
 
 .section {
-    outline: 1px solid teal;
-    // color: inherit;
+    // outline: 1px solid teal;
+    // // color: inherit;
     &-title {
-        font-size: 48px;
+        font-size: 24px;
         color: $title-text-color;
     }
     &-text {
-        font-size: 16px;
+        font-size: 15px;
+    }
+    &-description {
+        font-size: 10px;
     }
 }
 
