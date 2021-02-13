@@ -93,7 +93,7 @@ ul {
     border-radius: 0px 24px 24px 0px;
     height: 100vh;
     width: 5%;
-    @media(max-width: 1160px){
+    @media (max-width: 1160px) {
         width: 10%;
     }
     display: flex;
@@ -127,6 +127,7 @@ ul {
     display: none;
     @media (max-width: 600px) {
         display: block;
+        overflow: hidden;
     }
 }
 #menu__toggle {
@@ -229,12 +230,14 @@ ul {
 }
 #menu__toggle:checked ~ .menu__btn > span::before {
     top: 0;
+    position: absolute;
     background: #fff;
     transform: translate(0px, 0) rotate(0);
 }
 #menu__toggle:checked ~ .menu__btn > span::after {
     top: 0;
     background: #fff;
+    position: absolute;
     transform: translate(0px, 0) rotate(90deg);
 }
 #menu__toggle:checked ~ .menu__box {
@@ -259,11 +262,11 @@ ul {
     background: #fafafa;
     border-radius: 14px;
     color: var(--text-color);
-    &_text {
+    font-style: normal;
+    &__text {
         margin-left: 30px;
         & h1 {
             font-family: "SF UI Text";
-            font-style: normal;
             font-weight: bold;
             font-size: 36px;
             line-height: 43px;
@@ -275,7 +278,6 @@ ul {
         }
         & h5 {
             font-family: "Roboto";
-            font-style: normal;
             font-weight: normal;
             font-size: 16px;
             line-height: 24px;
@@ -285,8 +287,9 @@ ul {
             }
         }
     }
-    &_image{
-        @media (max-width:400px){
+    &__image {
+        display: flex;
+        @media (max-width: 400px) {
             display: none;
         }
     }
@@ -294,11 +297,11 @@ ul {
         grid-row: 2 / 3;
         grid-column: 1 / 2;
     }
-    @media (max-width: 600px){
+    @media (max-width: 600px) {
         margin-top: 30px;
     }
-    @media (max-width: 400px){
-height: 100px;
+    @media (max-width: 400px) {
+        height: 100px;
     }
 }
 .my-course {
@@ -317,7 +320,7 @@ height: 100px;
         & img {
             margin-left: 30px;
             margin-right: 40px;
-            @media (max-width: 400px){
+            @media (max-width: 400px) {
                 margin-left: 20px;
             }
         }
@@ -350,7 +353,7 @@ height: 100px;
         @media (max-width: 1700px) {
             margin-right: 20px;
         }
-        @media (max-width: 400px){
+        @media (max-width: 400px) {
             margin-top: 25px;
             justify-content: space-between;
             margin-right: 15px;
@@ -361,10 +364,12 @@ height: 100px;
         grid-row: 4 / 5;
         grid-column: 1 / 2;
     }
-    @media (max-width: 400px){
+    @media (max-width: 400px) {
         grid-row: 3 / 4;
         grid-column: 1 / 2;
         flex-direction: column;
+        height: 160px;
+        padding: 5px;
     }
 }
 .filter-wrapper {
@@ -402,6 +407,11 @@ height: 100px;
         &::-moz-focus-inner {
             border: 0;
         }
+        @media (max-width:400px) {
+            font-size: 12px;
+        }
+            
+        
     }
     &__container-element {
         display: flex;
@@ -417,9 +427,14 @@ height: 100px;
             & img {
                 margin-left: 30px;
                 margin-right: 40px;
+                width: 32px;
+                height: auto;
                 @media (max-width: 1470px) {
                     margin-left: 5px;
                     margin-right: 10px;
+                }
+                @media (max-width: 500px){
+                    margin-right: 40px;
                 }
             }
 
@@ -440,9 +455,18 @@ height: 100px;
                     font-size: 12px;
                     line-height: 14px;
                 }
+                @media (max-width: 500px){
+                    width: 90%;
+                }
+            }
+            @media (max-width: 500px){
+                justify-content: space-between;
+                width: 100%;
+                margin-left: 10px;
+                margin-bottom: 10px;
             }
         }
-        &--content{
+        &--content {
             display: flex;
             justify-content: space-around;
             width: 80%;
@@ -450,19 +474,17 @@ height: 100px;
             &-time {
                 display: flex;
                 width: 40%;
+                align-items: center;
                 & img {
                     margin-right: 8px;
                     width: 16px;
-                    height: auto;
-                }
-                @media (max-width: 1700px) {
-                    width: 20%;
+                    height: 17px;
                 }
             }
             &-mark {
                 display: flex;
                 justify-content: space-between;
-    
+
                 & div {
                     display: flex;
                     align-items: center;
@@ -481,14 +503,24 @@ height: 100px;
                         margin-right: 20px;
                     }
                 }
+                
+            }
+            @media (max-width: 500px){
+                width: 100%;
+                justify-content: space-between;
+            }
         }
-       
+        @media (max-width: 500px){
+            flex-direction: column;
+            height: 160px;
+            padding-top: 10px;
         }
     }
     @media (max-width: 1160px) {
         grid-row: 6 / 9;
         grid-column: 1 / 2;
     }
+    
 }
 .profile-information-header {
     grid-row: 1 / 2;
@@ -629,11 +661,12 @@ height: 100px;
         grid-column: 1 / 2;
     }
     @media (max-width: 600px) {
-        width: 80%;
+        width: 75%;
         position: absolute;
         right: 25px;
         top: 15px;
     }
+
 }
 .profile-information-progress {
     grid-row: 2 / 3;
@@ -680,7 +713,7 @@ height: 100px;
         grid-column: 1 / 2;
         flex-direction: row;
     }
-    @media (max-width: 400px){
+    @media (max-width: 400px) {
         grid-row: 4 / 5;
         grid-column: 1 / 2;
         flex-direction: column;
@@ -714,7 +747,6 @@ height: 100px;
     }
     @media (max-width: 1160px) {
         display: none;
-
     }
 }
 .more-curces {
@@ -748,16 +780,16 @@ height: 100px;
             & p {
                 margin-bottom: 27px;
             }
-            @media (max-width:400px){
+            @media (max-width: 400px) {
                 width: 100%;
             }
         }
     }
-    & img{
+    & img {
         position: absolute;
         right: 40px;
         bottom: 55px;
-        @media (max-width:400px){
+        @media (max-width: 400px) {
             display: none;
         }
     }
@@ -765,7 +797,7 @@ height: 100px;
         grid-row: 5 / 6;
         grid-column: 1 / 2;
     }
-    @media (max-width:400px){
+    @media (max-width: 400px) {
         margin-top: 25px;
     }
 }
