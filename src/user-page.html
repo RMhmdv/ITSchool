@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/user-page/logo.svg" type="img/svg">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="wrapper">
+        <section class="main-navigation">
+
+            <nav class="main-navigation__nav">
+                <div class="main-navigation__logo"><a href="#"><img src="./images/user-page/logo.svg" alt="logo"
+                            class="logo-img"></a>
+                </div>
+                <ul class="main-navigation__nav-list">
+                    <li class="main-navigation__nav-list--item">
+                        <a href="#" class="item" title="Главная">
+                            <img src="./images/user-page/home.svg" alt="home">
+                        </a>
+                    </li>
+                    <li class="main-navigation__nav-list--item">
+                        <a href="#" class="item" title="Курсы">
+                            <img src="./images/user-page/courses.svg" alt="more-curses">
+                        </a>
+                    </li>
+                    <li class="main-navigation__nav-list--item">
+                        <a href="#" class="item" title="Аккаунт">
+                            <img src="./images/user-page/profile.svg" alt="profile">
+                        </a>
+                    </li>
+                    <li class="main-navigation__nav-list--item">
+                        <a href="#" class="item" title="Оповещения">
+                            <img src="./images/user-page/masseges.svg" alt="masseges">
+                        </a>
+                    </li>
+                    <li class="main-navigation__nav-list--item">
+                        <a href="#" class="item" title="Настройки">
+                            <img src="./images/user-page/settings.svg" alt="settings">
+                        </a>
+                    </li>
+                </ul>
+                <div class="main-navigation__log-out">
+                    <a href="#" class="main-navigation__log-out-item" title="Выход">
+                        <img src="./images/user-page/log-out.svg" alt="log-out">
+                    </a>
+                </div>
+            </nav>
+        </section>
+        <div class="hamburger-menu">
+            <input id="menu__toggle" type="checkbox" />
+            <label class="menu__btn" for="menu__toggle">
+                <span></span>
+            </label>
+            <ul class="menu__box">
+                <li>
+                    <img src="./images/user-page/logo.svg" alt="logo" class="logo-img">
+                </li>
+                <li><a class="menu__item" href="#">
+                        <img src="./images/user-page/home.svg" alt="home">
+                        <p>Главная</p>
+                    </a></li>
+                <li><a class="menu__item" href="#">
+                        <img src="./images/user-page/courses.svg" alt="more-curses">
+                        <p>Курсы</p>
+                    </a></li>
+                <li><a class="menu__item" href="#">
+                        <img src="./images/user-page/profile.svg" alt="profile">
+                        <p>Аккаунт</p>
+                    </a></li>
+                <li><a class="menu__item" href="#">
+                        <img src="./images/user-page/masseges.svg" alt="masseges">
+                        <p>Оповещения</p>
+                    </a></li>
+                <li><a class="menu__item" href="#">
+                        <img src="./images/user-page/settings.svg" alt="settings">
+                        <p>Настройки</p>
+                    </a></li>
+                <li><a class="menu__item" href="#">
+                        <img src="./images/user-page/log-out.svg" alt="log-out">
+                        <p>Выйти</p>
+                    </a></li>
+            </ul>
+        </div>
+
+        <section class="content-wrapper">
+
+            <div class="main-header">
+                <div class="main-header__text">
+                    <h1>Привет, username!</h1>
+                    <h5>Рад, что ты снова зашел</h5>
+                </div>
+                <div class="main-header__image">
+                    <img src="./images/user-page/header-img.png" alt="Hi!">
+                </div>
+            </div>
+
+            <div class="my-course">
+                <div class="my-course_name">
+                    <img src="./images/user-page/spanish.jpg" alt="spanish">
+                    <div class="my-course_name-title">
+                        <h6>Испанский язык</h6>
+                        <p>Автор: Alejandro Velazquez</p>
+                    </div>
+                </div>
+                <div class="my-course_progress">
+                    <img src="./images/user-page/progress.svg" alt="progress">
+                    <button class="first-button">Продолжить</button>
+                </div>
+            </div>
+
+            <div class="profile-information-header">
+                <div class="profile-information-header__search">
+                    <form action="">
+                        <input type="submit" value="">
+                        <input type="search" placeholder="Введи название курса">
+                    </form>
+                </div>
+                <div class="profile-information-header__prifile">
+                    <div class="profile-information-header__prifile--dropdown">
+                        <img src="./images/user-page/profile-img.png" onclick="myFunction()" class="dropbtn">
+                        <div id="myDropdown" class="dropdown__content">
+                            <a href="#"><img src="./images/user-page/profile.svg" alt="profile">
+                                <p class="dropdown__content-text">
+                                    <span>А</span><span>к</span><span>к</span><span>а</span><span>у</span><span>н</span><span>т</span>
+                                </p>
+                            </a>
+                            <a href="#"><img src="./images/user-page/settings.svg" alt="setting">
+                                <p class="dropdown__content-text">
+                                    <span>Н</span><span>а</span><span>с</span><span>т</span><span>р</span><span>о</span><span>й</span><span>к</span><span>и</span>
+                                </p>
+                            </a>
+                            <a href="#"><img src="./images/user-page/log-out.svg" alt="log-out">
+                                <p class="dropdown__content-text">
+                                    <span>В</span><span>ы</span><span>й</span><span>т</span><span>и</span>
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-information-progress">
+                <div class="profile-information-progress__ready">
+                    <h3 class="profile-information-progress__count">11</h3>
+                    <p class="profile-information-progress__name">Завершено курсов</p>
+                </div>
+                <div class="profile-information-progress__active">
+                    <h3 class="profile-information-progress__count">4</h3>
+                    <p class="profile-information-progress__name">Активных курсов</p>
+                </div>
+            </div>
+
+            <div class="profile-information-statistic">
+                <h3 class="profile-information-statistic__title">
+                    Ваша статистика
+                </h3>
+                <h4 class="profile-information-statistic__subtitle">Ваша статистка за неделю</h4>
+                <img class="profile-information-statistic__image" src="./images/user-page/statistics.png" alt="statistics">
+            </div>
+
+            <div class="more-curces">
+                <h3 class="more-curces__title">Еще больше курсов</h3>
+                <div class="more-curces__content">
+                    <div class="more-curces__content-text">
+                        <p>Открой доступ ко всей базе курсов за $
+                            9,99 / месяц</p>
+                        <button class="first-button">Подписка</button>
+                    </div>
+                    <img src="./images/user-page/more-course-img.png" alt="more-curses">
+                </div>
+            </div>
+
+            <div class="filter-wrapper">
+                <h3 class="filter-wrapper__title">Курсы</h3>
+
+                <a href="#0" class="filter filter-wrapper__link" data-filter="all" data-sort="default">Все курсы
+                </a>
+                <a href="#0" class="filter filter-wrapper__link" data-sort="time:desc">Новые </a>
+                <a href="#0" class="filter filter-wrapper__link" data-sort="rating:desc"> Самые популярные</a>
+
+                <div class="filter-wrapper__container">
+                    <div class="mix filter-wrapper__container-element" data-time="2020-04-04 20:53:32"
+                        data-rating="4.9">
+                        <div class="filter-wrapper__container-element--name">
+                            <img src="./images/user-page/figma.jpg" alt="figma">
+                            <div class="filter-wrapper__container-element--name--title">
+                                <h6>Figma с нуля</h6>
+                                <p>Автор: Christopher Morgan</p>
+                            </div>
+                        </div>
+                        <div class="filter-wrapper__container-element--content">
+                            <div class="filter-wrapper__container-element--content-time">
+                                <img src="./images/user-page/time.svg" alt="time">
+                                <p>6ч 30мин</p>
+                            </div>
+                            <div class="filter-wrapper__container-element--content-mark">
+                                <div>
+                                    <img src="./images/user-page/mark.svg" alt="progress">
+                                    <p>4,9</p>
+                                </div>
+                                <button class="second-button">О курсе</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mix filter-wrapper__container-element" data-time="2022-03-06 10:50:32"
+                        data-rating="4.4">
+                        <div class="filter-wrapper__container-element--name">
+                            <img src="./images/user-page/figma.jpg" alt="figma">
+                            <div class="filter-wrapper__container-element--name--title">
+                                <h6>Figma с нуля</h6>
+                                <p>Автор: Christopher Morgan</p>
+                            </div>
+                        </div>
+                        <div class="filter-wrapper__container-element--content">
+                            <div class="filter-wrapper__container-element--content-time">
+                                <img src="./images/user-page/time.svg" alt="time">
+                                <p>6ч 30мин</p>
+                            </div>
+                            <div class="filter-wrapper__container-element--content-mark">
+                                <div>
+                                    <img src="./images/user-page/mark.svg" alt="progress">
+                                    <p>4,9</p>
+                                </div>
+                                <button class="second-button">О курсе</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mix filter-wrapper__container-element" data-time="2012-04-04 10:20:32"
+                        data-rating="2.3">
+                        <div class="filter-wrapper__container-element--name">
+                            <img src="./images/user-page/figma.jpg" alt="figma">
+                            <div class="filter-wrapper__container-element--name--title">
+                                <h6>Figma с нуля</h6>
+                                <p>Автор: Christopher Morgan</p>
+                            </div>
+                        </div>
+                        <div class="filter-wrapper__container-element--content">
+                            <div class="filter-wrapper__container-element--content-time">
+                                <img src="./images/user-page/time.svg" alt="time">
+                                <p>6ч 30мин</p>
+                            </div>
+                            <div class="filter-wrapper__container-element--content-mark">
+                                <div>
+                                    <img src="./images/user-page/mark.svg" alt="progress">
+                                    <p>4,9</p>
+                                </div>
+                                <button class="second-button">О курсе</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="../js/vendors/bundle.js"></script>
+        <script src="../js/mixitup.min.js"></script>
+        <script src="../js/user_page.js"></script>
+        <script src="../js/script.js"></script>
+
+</body>
+
+</html>
