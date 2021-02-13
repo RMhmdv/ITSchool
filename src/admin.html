@@ -5,17 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="IT School">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <title>Admin</title>
 </head>
 
 <body>
-
+    <div class="preloader">
+        <div class="loader">
+            <img src="images/icon/logo-loader.svg" alt="logo">
+        </div>
+    </div>
     <section class="admin__container">
+
         <div class="left">
+            <!-- menu start -->
             <div class="admin__nav">
                 <div class="logo">
                     <a class="logo__link" href="/">
@@ -55,18 +58,22 @@
                     </a>
                 </div>
             </div>
-
+            <!-- menu end -->
 
         </div>
         <div class="right">
             <h2 class="admin__container-title">Панель администратора</h2>
-            <div class="burger-menu__button">
-                <span class="burger-menu__line"></span>
+            <span class="line"></span>
+            <!-- burger-menu start -->
+            <div class="burger-menu__button-wrap">
+                <div class="burger-menu__button">
+                    <span class="burger-menu__line"></span>
+                </div>
             </div>
             <div class="burger-menu">
                 <div class="logo">
-                    <a class="burger-menu_link" href="/">
-                        <img class="logo__img" src="images/icon/logo-admin.svg" alt="logo">
+                    <a class="burger-menu__link" href="/">
+                        <img class="burger-menu__logo" src="images/icon/logo-admin.svg" alt="logo">
                     </a>
                 </div>
                 <ul class="burger-menu__list">
@@ -74,39 +81,47 @@
                         <a href="admin.html" class="burger-menu__link">
                             <img class="nav__icon" src="images/icon/home.svg" alt="home">
                         </a>
+                        <span class="burger-menu__item-name">Главная</span>
                     </li>
                     <li class="burger-menu__item">
                         <a href="#" class="burger-menu__link">
                             <img class="nav__icon" src="images/icon/course.svg" alt="course">
                         </a>
+                        <span class="burger-menu__item-name">Курсы</span>
                     </li>
                     <li class="burger-menu__item">
                         <a href="#" class="burger-menu__link">
                             <img class="nav__icon" src="images/icon/user.svg" alt="user">
                         </a>
+                        <span class="burger-menu__item-name">Аккаунт</span>
                     </li>
                     <li class="burger-menu__item">
                         <a href="#" class="burger-menu__link">
                             <img class="nav__icon" src="images/icon/mail.svg" alt="mail">
                         </a>
+                        <span class="burger-menu__item-name">Оповещения</span>
                     </li>
                     <li class="burger-menu__item">
                         <a href="#" class="burger-menu__link">
                             <img class="nav__icon" src="images/icon/setting.svg" alt="setting">
                         </a>
+                        <span class="burger-menu__item-name">Настройки</span>
                     </li>
                 </ul>
                 <div class="logout">
                     <a class="burger-menu__link" href="#">
                         <img class="logout__img" src="images/icon/logout.svg" alt="logout">
                     </a>
+                    <span class="burger-menu__item-name">Выйти</span>
                 </div>
-                <div class="burger-menu__overlay"></div>
             </div>
+            <!-- burger-menu end -->
+
+            <!-- course start -->
             <div class="course__container">
                 <h2 class="course__container-title">Курсы</h2>
                 <div class="course__add">
-                    <a class="button button--primary-admin" href="add.html">Добавить курс</a>
+                    <a class="btn btn--green" href="add.html">Добавить курс</a>
                 </div>
 
                 <div class="course__nav">
@@ -135,9 +150,9 @@
                             <span class="course__rating-score">4,9</span>
                         </div>
                         <div class="course__action-btn">
-                            <a class="button button--transparent-admin" href="about-course.html">О курсе</a>
-                            <a class="button button--primary-admin" href="update.html">Изменить курс</a>
-                            <a class="button button--alert">Удалить курс</a>
+                            <a class="btn btn--transparent" href="about-course.html">О курсе</a>
+                            <a class="btn btn--primary" href="update.html">Изменить курс</a>
+                            <a class="btn btn--alert">Удалить курс</a>
                         </div>
                     </div>
                     <div class="mix  course__single" data-time="2021-04-04 14:59:29" data-rating="4.7">
@@ -160,9 +175,9 @@
                             <span class="course__rating-score">4,7</span>
                         </div>
                         <div class="course__action-btn">
-                            <a class="button button--transparent-admin" href="about-course.html">О курсе</a>
-                            <a class="button button--primary-admin" href="update.html">Изменить курс</a>
-                            <a class="button button--alert">Удалить курс</a>
+                            <a class="btn btn--transparent" href="about-course.html">О курсе</a>
+                            <a class="btn btn--primary" href="update.html">Изменить курс</a>
+                            <a class="btn btn--alert">Удалить курс</a>
                         </div>
                     </div>
                     <div class="mix course__single" data-time="2019-04-04 20:59:29" data-rating="4.6">
@@ -185,9 +200,9 @@
                             <span class="course__rating-score">4,6</span>
                         </div>
                         <div class="course__action-btn">
-                            <a class="button button--transparent-admin" href="about-course.html">О курсе</a>
-                            <a class="button button--primary-admin" href="update.html">Изменить курс</a>
-                            <a class="button button--alert">Удалить курс</a>
+                            <a class="btn btn--transparent" href="about-course.html">О курсе</a>
+                            <a class="btn btn--primary" href="update.html">Изменить курс</a>
+                            <a class="btn btn--alert">Удалить курс</a>
                         </div>
                     </div>
                     <div class="mix course__single" data-time="2020-04-04 23:59:29" data-rating="4.8">
@@ -210,9 +225,9 @@
                             <span class="course__rating-score">4,8</span>
                         </div>
                         <div class="course__action-btn">
-                            <a class="button button--transparent-admin" href="about-course.html">О курсе</a>
-                            <a class="button button--primary-admin" href="update.html">Изменить курс</a>
-                            <a class="button button--alert">Удалить курс</a>
+                            <a class="btn btn--transparent" href="about-course.html">О курсе</a>
+                            <a class="btn btn--primary" href="update.html">Изменить курс</a>
+                            <a class="btn btn--alert">Удалить курс</a>
                         </div>
                     </div>
                     <div class="mix course__single" data-time="2020-04-04 11:59:29" data-rating="4.7">
@@ -235,20 +250,20 @@
                             <span class="course__rating-score">4,7</span>
                         </div>
                         <div class="course__action-btn">
-                            <a class="button button--transparent-admin" href="about-course.html">О курсе</a>
-                            <a class="button button--primary-admin" href="update.html">Изменить курс</a>
-                            <a class="button button--alert">Удалить курс</a>
+                            <a class="btn btn--transparent" href="about-course.html">О курсе</a>
+                            <a class="btn btn--primary" href="update.html">Изменить курс</a>
+                            <a class="btn btn--alert">Удалить курс</a>
                         </div>
                     </div>
                 </div>
 
             </div>
+            <!-- course start end-->
         </div>
 
     </section>
 
-
-    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="js/scripts.js">
     </script>
 </body>
