@@ -1,6 +1,7 @@
 .about-section {
     padding-top: 80px;
     padding-bottom: 50px;
+    border-bottom: 1px solid $secondary-bg-color;
 }
 
 .about-wrapper {
@@ -26,8 +27,11 @@
 .about-content {
     display: flex;
     flex-direction: column;
-    margin: 0 auto 93px;
-    
+    margin: 0 auto;
+}
+
+.about-title {
+    margin-bottom: 93px;
 }
 
 .features__list {

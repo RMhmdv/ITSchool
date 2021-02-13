@@ -8,16 +8,17 @@
 @import './utils/mixin';
 @import './utils/fonts';
 @import './components/button';
-@import './components/header';
-@import './components/hero';
-@import './components/about';
-@import './components/stats';
-@import './components/feedback';
-@import './components/faq';
-@import './components/price';
-@import './components/footer';
+@import './sections/header';
+@import './sections/hero';
+@import './sections/about';
+@import './sections/stats';
+@import './sections/feedback';
+@import './sections/faq';
+@import './sections/price';
+@import './sections/footer';
 @import './components/modal';
 @import "./components/admin/admin";
 @import"./components/admin/about-course";
 @import"./components/admin/add";
 @import"./components/admin/button-admin";
+@import"./components/admin/button-admin"
