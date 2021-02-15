@@ -1,6 +1,4 @@
-/*
- * Все паршалы импортировать в этот файл
- */
+@import "base/settings";
 
 @import './base/normalize.scss';
 @import './utils/vars';
@@ -26,4 +24,3 @@
 @import'./components/user-page/mobile-menu';
 @import'./components/user-page/button-user-page';
 @import'./components/user-page/user-page';
-

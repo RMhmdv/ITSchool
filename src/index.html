@@ -1,42 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>IT School</title>
-    <!-- <link rel="stylesheet" href="css/styles.css" /> -->
-  </head>
-  <body class="body">
+<head>
+    <meta charset="UTF-8">
+    <title>Project</title>
+    <link rel="stylesheet" href="css/index.min.css">
+</head>
+<body>
+
+    @include("html/blocks/_header.html")
+
+    @include("html/blocks/_hero.html")
+    @include("html/blocks/_about.html")
+    @include("html/blocks/_stats.html")
+    @include("html/blocks/_feedback.html")
+    @include("html/blocks/_faq.html")
+    @include("html/blocks/_price.html")
+    @include("html/blocks/_footer.html")
     
-    //= ./html/blocks/_header.html
-    //= ./html/blocks/_hero.html
-    //= ./html/blocks/_about.html
-    //= ./html/blocks/_stats.html
-    //= ./html/blocks/_feedback.html
-    //= ./html/blocks/_faq.html
-    //= ./html/blocks/_price.html
-    //= ./html/blocks/_footer.html
-    
-    //= ./html/blocks/_modal.html
+    @include("html/blocks/_modal.html")
 
-    <!-- //= ./html/pages/admin-page/admin.html
-    //= ./html/pages/admin-page/admin-nav.html
-    //= ./html/pages/admin-page/admin-header.html
-    //= ./html/pages/admin-page/admin-footer.html
 
-    //= ./html/pages/user-page/user-page.html
-    //= ./html/pages/user-page/user-page-header.html
-    //= ./html/pages/user-page/user-page-footer.html
+    @include("html/pages/admin-page/admin.html")
+    @include("html/pages/admin-page/_admin-nav.html")
+    @include("html/pages/admin-page/_admin-header.html")
+    @include("html/pages/admin-page/_admin-footer.html")
 
-    //= ./html/pages/about-course.html
-    //= ./html/pages/add.html
-    //= ./html/pages/update.html
- -->
+    @include("html/pages/user-page/user-page.html")
+    @include("html/pages/user-page/_user-page-header.html")
+    @include("html/pages/user-page/_user-page-footer.html")
 
-    <!-- <script src="./just-validate.min.js"></script>
-    <script src="./js/modal.js"></script>
-    <script src="./js/admin.js"></script>
-    <script src="./js/mixitup.min.js"></script> -->
-  </body>
+    @include("html/pages/about-course.html")
+    @include("html/pages/add.html")
+    @include("html/pages/update.html")
+
+
+
+<!-- <script src="js/index.js"></script> -->
+</body>
 </html>
