@@ -101,19 +101,6 @@ $(document).ready(function () {
 });
 "use strict";
 
-$(function () {
-  var mixer = mixitup('.filter-wrapper__container', {
-    load: {
-      filter: 'all',
-      sort: 'default'
-    },
-    animation: {
-      duration: 300
-    }
-  });
-});
-"use strict";
-
 function _typeof2(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof2 = function _typeof2(obj) { return typeof obj; }; } else { _typeof2 = function _typeof2(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof2(obj); }
 
 function _defineProperty(e, t, i) {
@@ -2765,24 +2752,4 @@ jQuery.fn.putCursorAtEnd = function () {
       $(this).val($(this).val());
     }
   });
-};
-"use strict";
-
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
-
-window.onclick = function (event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown__content");
-    var i;
-
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
 };

@@ -20,13 +20,13 @@ module.exports = {
         js: 'build/js',
         images: 'build/images',
         fonts: 'build/fonts',
-        php: 'build/php',
+        php: 'build/php/',
     },
     inject: {
         html: 'build/index.html',
         css: 'build/css/**/*.css',
         js: 'build/js/**/*.js',
-        php: 'build/php/*.php',
+        php: 'build/php/*.php'
     },
     clean: 'build/',
 };
