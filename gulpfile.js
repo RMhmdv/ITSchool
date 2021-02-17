@@ -1,175 +1,49 @@
-const { src, dest, watch, series, parallel } = require('gulp')
-const scss = require('gulp-sass')
-const notify = require('gulp-notify')
-const sourcemaps = require('gulp-sourcemaps')
-const rename = require('gulp-rename')
-const autoprefixer = require('gulp-autoprefixer')
-const cleanCSS = require('gulp-clean-css')
-const browserSync = require('browser-sync').create()
-const fileinclude = require('gulp-file-include')
-const svgSprite = require('gulp-svg-sprite')
-const ttf2woff = require('gulp-ttf2woff')
-const ttf2woff2 = require('gulp-ttf2woff2')
-const del = require('del')
-const webpackStream = require('webpack-stream')
-const uglify = require('gulp-uglify-es').default
+'use strict';
 
-const clean = () => (
-    del(['./dist'])
-)
+const { series, parallel, watch } = require('gulp');
+const requireDir = require('require-dir');
+const browserSync = require('browser-sync').create();
+const tasks = requireDir('./gulp/tasks', { recurse: true });
+const paths = require('./gulp/paths');
 
-const fonts = () => {
-    src('./src/fonts/**.ttf')
-        .pipe(ttf2woff())
-        .pipe(dest('./dist/fonts'))
+const serve = () => {
+    return browserSync.init({
+        server: 'build',
+        notify: false,
+        open: false,
+        cors: true,
+        ui: false,
+        logPrefix: 'DevServer',
+        host: 'localhost',
+        port: process.env.PORT || 1234,
+    });
+};
 
-    return src('./src/fonts/**.ttf')
-        .pipe(ttf2woff2())
-        .pipe(dest('./dist/fonts'))
-}
+const watcher = done => {
+    watch(paths.watch.html).on(
+        'change',
+        series(tasks.html, tasks.inject, browserSync.reload),
+    );
+    watch(paths.watch.css).on('change', series(tasks.css, browserSync.reload));
+    watch(paths.watch.js).on('change', series(tasks.scripts, browserSync.reload));
+    watch(paths.watch.images, tasks.images);
+    watch(paths.watch.fonts, tasks.fonts);
 
-const scripts = () => {
-    return src('./src/js/index.js')
-        .pipe(webpackStream({
-            mode: 'development',
-            output: {
-                filename: 'index.js',
-            },
-            module: {
-                rules: [{
-                    test: /\.m?js$/,
-                    exclude: /(node_modules|bower_components)/,
-                    use: {
-                        loader: 'babel-loader',
-                        options: {
-                            presets: ['@babel/preset-env']
-                        }
-                    }
-                }]
-            },
-        }))
-        .on('error', function (err) {
-            console.error('WEBPACK ERROR', err);
-            this.emit('end');
-        })
+    done();
+};
 
-        .pipe(sourcemaps.init())
-        .pipe(uglify().on("error", notify.onError()))
-        .pipe(sourcemaps.write('.'))
-        .pipe(dest('./dist/js'))
-        .pipe(browserSync.stream());
-}
+exports.start = series(
+    tasks.clean,
+    tasks.images,
+    parallel(tasks.css, tasks.fonts, tasks.scripts, tasks.html),
+    tasks.inject,
+    watcher,
+    serve,
+);
 
-const svgSprites = () => (
-    src(['./src/images/**.svg'])
-        .pipe(svgSprite({
-            mode: {
-                stack: {
-                    sprite: '../sprite.svg'
-                }
-            }
-        }))
-        .pipe(dest('./dist/images'))
-)
-
-const styles = () => (
-    src('./src/scss/index.scss')
-        .pipe(sourcemaps.init())
-        .pipe(scss({
-            outputStyle: 'expanded'
-        }).on('error', notify.onError()))
-        .pipe(rename({
-            suffix: '.min'
-        }))
-        .pipe(autoprefixer({
-            cascade: false
-        }))
-        .pipe(cleanCSS({
-            level: 2
-        }))
-        .pipe(sourcemaps.write('.'))
-        .pipe(dest('./dist/css'))
-        .pipe(browserSync.stream())
-)
-
-const imgToDist = () => (
-    src(['./src/images/**.jpg', './src/images/**.jpeg', './src/images/**.png'])
-        .pipe(dest('./dist/images'))
-)
-
-const htmlInclude = () => (
-    src('./src/index.html')
-        .pipe(fileinclude({
-            prefix: '@',
-            basepath: '@file'
-        }))
-        .pipe(dest('./dist'))
-        .pipe(browserSync.stream())
-)
-
-const watchFiles = () => {
-    browserSync.init({
-        server: {
-            baseDir: './dist'
-        }
-    })
-
-    watch('./src/scss/**/*.scss', styles)
-    watch('./src/index.html', htmlInclude)
-    watch(['./src/images/**.jpg', './src/images/**.jpeg', './src/images/**.png'], imgToDist)
-    watch(['./src/images/**.svg'], svgSprites)
-    watch(['./src/fonts/**.ttf'], fonts)
-    watch('./src/js/**/*.js', scripts)
-}
-
-exports.styles = styles
-exports.watchFiles = watchFiles
-
-exports.default = series(clean, parallel(htmlInclude, scripts, fonts, imgToDist, svgSprites), styles, watchFiles)
-
-const stylesBuild = () => {
-    return src('./src/scss/**/*.scss')
-        .pipe(scss({
-            outputStyle: 'expanded'
-        }).on('error', notify.onError()))
-        .pipe(rename({
-            suffix: '.min'
-        }))
-        .pipe(autoprefixer({
-            cascade: false,
-        }))
-        .pipe(cleanCSS({
-            level: 2
-        }))
-        .pipe(dest('./dist/css/'))
-}
-
-const scriptsBuild = () => {
-    return src('./src/js/index.js')
-        .pipe(webpackStream({
-            mode: 'development',
-            output: {
-                filename: 'index.js',
-            },
-            module: {
-                rules: [{
-                    test: /\.m?js$/,
-                    exclude: /(node_modules|bower_components)/,
-                    use: {
-                        loader: 'babel-loader',
-                        options: {
-                            presets: ['@babel/preset-env']
-                        }
-                    }
-                }]
-            },
-        }))
-        .on('error', function (err) {
-            console.error('WEBPACK ERROR', err);
-            this.emit('end');
-        })
-        .pipe(uglify().on("error", notify.onError()))
-        .pipe(dest('./dist/js'))
-}
-
-exports.build = series(clean, parallel(htmlInclude, scriptsBuild, fonts, imgToDist, svgSprites), stylesBuild);
+exports.build = series(
+    tasks.clean,
+    tasks.images,
+    parallel(tasks.css, tasks.fonts, tasks.scripts, tasks.html),
+    tasks.inject,
+);
