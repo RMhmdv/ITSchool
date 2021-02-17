@@ -6,7 +6,11 @@ jQuery(document).ready(function ($) {
         formModalTab = $('.cd-switcher'),
         tabLogin = formModalTab.children('li').eq(0).children('a'),
         tabSignup = formModalTab.children('li').eq(1).children('a'),
+<<<<<<< HEAD
         mainNav = $('.header__btn');
+=======
+        mainNav = $('.nav_modal');
+>>>>>>> dev
 
     mainNav.on('click', function (event) {
         $(event.target).is(mainNav) && mainNav.children('a').toggleClass('is-visible');
@@ -90,30 +94,6 @@ new JustValidate('.cd-form', {
             required: 'Придумайте пароль',
             minLength: 'Нужно ввести минимум 6 символов',
         },
-    },
-    submitHandler: function (form) {
-        let xhr = new XMLHttpRequest();
-
-        xhr.open("POST", "../mail.php", true);
-
-        let formData = new FormData(form);
-
-        xhr.addEventListener("load", function () {
-            if (xhr.readyState === 4) {
-                switch (xhr.status) {
-                    case 200:
-                        showNewModal();
-                        break;
-                    case 404:
-                        console.log("You are looser!");
-                        break;
-                    default:
-                        console.log(":(");
-                        break;
-                }
-            }
-        });
-        xhr.send(formData);
     },
 });
 
