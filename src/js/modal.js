@@ -6,11 +6,7 @@ jQuery(document).ready(function ($) {
         formModalTab = $('.cd-switcher'),
         tabLogin = formModalTab.children('li').eq(0).children('a'),
         tabSignup = formModalTab.children('li').eq(1).children('a'),
-<<<<<<< HEAD
         mainNav = $('.header__btn');
-=======
-        mainNav = $('.nav_modal');
->>>>>>> dev
 
     mainNav.on('click', function (event) {
         $(event.target).is(mainNav) && mainNav.children('a').toggleClass('is-visible');
