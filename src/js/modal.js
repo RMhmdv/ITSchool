@@ -6,10 +6,10 @@ jQuery(document).ready(function ($) {
         formModalTab = $('.cd-switcher'),
         tabLogin = formModalTab.children('li').eq(0).children('a'),
         tabSignup = formModalTab.children('li').eq(1).children('a'),
-        mainNav = $('.main-nav');
+        mainNav = $('.header__btn');
 
     mainNav.on('click', function (event) {
-        $(event.target).is(mainNav) && mainNav.children('ul').toggleClass('is-visible');
+        $(event.target).is(mainNav) && mainNav.children('a').toggleClass('is-visible');
     });
     mainNav.on('click', '.cd-signin', login_selected);
     mainNav.on('click', '.cd-signup', signup_selected);
