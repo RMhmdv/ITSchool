@@ -1,3 +1,17 @@
+<?php 
+
+$id = $_GET['id'];
+
+session_start();
+if ($_SESSION['isAdmin']) {
+    
+require_once('php/connect.php');
+$db_data = mysqli_query($connect, "SELECT * FROM `courses` where `id` = '$id'");
+$course = mysqli_fetch_assoc($db_data);
+} else {
+header('Location: /');
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,6 +19,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="IT School">
+    <link rel="shortcut icon" href="./images/user-page/logo.svg" type="img/svg">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
@@ -54,7 +69,7 @@
                     </li>
                 </ul>
                 <div class="logout">
-                    <a class="logout__link" href="#">
+                    <a class="logout__link" href="php/logout.php">
                         <img class="logout__img" src="images/icon/logout.svg" alt="logout">
                     </a>
                 </div>
@@ -118,26 +133,22 @@
             <div class="course__container">
                 <h2 class="course__container-title">Редактировать курс</h2>
                 <div class="form__container">
-                    <form class="form form-admin" action="POST">
+                    <form class="form form-admin" action="php/editCourse.php" method="POST">
+                        <input type="text" name="id" hidden value="<?php echo $course['id']?>">
                         <label class="form__label" for="name">Имя курса</label>
-                        <input class="form__input" name="name" data-validate-field="name" type="text">
+                        <input class="form__input" name="title" data-validate-field="name" type="text" value="<?php echo $course['title']?>">
 
                         <label class="form__label" for="author">Автор </label>
-                        <input class="form__input" name="author" data-validate-field="author" type="text">
+                        <input class="form__input" name="author" data-validate-field="author" type="text" value="<?php echo $course['author']?>">
 
                         <label class="form__label" for="">Длительность курса</label>
-                        <input class="form__input " type="text" data-validate-field="hour" placeholder="Часи">
-                        <input class="form__input " type="text" data-validate-field="min" placeholder="Минути">
-
-
-                        <label class="form__label" for="rating">Рейтинг</label>
-                        <input class="form__input" name="rating" data-validate-field="rating" type="text">
-                        <button class="btn btn--green-form-add">Сохранить</button>
+                        <input class="form__input " type="text" data-validate-field="hour" placeholder="1ч 20мин" name="time" value="<?php echo $course['time']?>">
+                                          
+                        <label class="form__label" for="about">О курсе</label>
+                        <textarea class="form__input" type="text" name="about"><?php echo $course['about']?></textarea>
+                        <input class="btn btn--green-form-add" type="submit" value="Изменить"></input>
                     </form>
                 </div>
-
-
-
             </div>
         </div>
 

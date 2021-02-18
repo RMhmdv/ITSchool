@@ -53,11 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 minLength: 2
             },
 
-            hour: {
-                required: true
-            },
-
-            min: {
+            time: {
                 required: true
             },
 
@@ -65,7 +61,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 required: true,
 
             }
-
 
         },
         messages: {
@@ -79,11 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 minLength: "Имя должно быть больше двух символов"
             },
 
-            hour: {
-                required: "Поле должно быть заполнeно"
-            },
-
-            min: {
+            time: {
                 required: "Поле должно быть заполнeно"
             },
 
@@ -91,20 +82,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 required: "Поле должно быть заполнeно",
             },
 
-        },
-        submitHandler: function(form, values, ajax) {
-            ajax({
-                url: "mail.php",
-                method: 'POST',
-                data: values,
-                async: true,
-                callback: function(response) {
-                    alert("Форма отправлена");
-                },
-                error: function(response) {
-                    alert("Хьюстон, у нас проблемы")
-                }
-            });
         },
     });
 
