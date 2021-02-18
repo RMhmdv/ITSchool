@@ -6,6 +6,7 @@ module.exports = {
         images: 'src/images/**/*',
         fonts: 'src/fonts/**/*',
         php: 'src/php/**/*',
+        htmlToPhp: 'src/*.php',
     },
     watch: {
         html: 'src/**/*.html',
@@ -14,6 +15,8 @@ module.exports = {
         images: 'src/images/**/*',
         fonts: 'src/fonts/**/*',
         php: 'src/php/**/*',
+        htmlToPhp: 'src/*.php',
+
 
     },
     build: {

@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>IT School</title>
+  <link rel="shortcut icon" href="./images/user-page/logo.svg" type="img/svg">
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 
@@ -28,6 +29,7 @@
       </div>
     </div>
   </header>
+
   <section class="section hero-section">
     <div class="container hero-section__container">
       <div class="hero__content">
@@ -255,7 +257,7 @@
         <li><a href="#0">Регистрация</a></li>
       </ul>
       <div id="cd-login">
-        <form class="cd-form" action="#" method="POST">
+        <form class="cd-form" action="php/login.php" method="POST">
           <p class="fieldset">
             <label class="image-replace cd-login" for="signin-login">Логин</label>
             <input class="fieldset-input" id="signin-login" name="login" type="text" placeholder="Логин" required />
@@ -273,7 +275,7 @@
       </div>
 
       <div id="cd-signup">
-        <form class="cd-form" action="#" method="POST">
+        <form class="cd-form" action="php/registration.php" method="POST">
           <p class="fieldset">
             <label class="image-replace cd-username" for="signup-username">Имя</label>
             <input class="fieldset-input" id="signup-username" name="name" type="text" placeholder="Имя" required />
@@ -291,7 +293,7 @@
 
           <p class="fieldset">
             <label class="image-replace cd-password" for="signup-password">Пароль</label>
-            <input class="fieldset-input" name="password" id="signup-password" type="text" placeholder="Пароль"
+            <input class="fieldset-input" name="password" id="signup-password" type="password" placeholder="Пароль"
               required />
             <a href="#0" class="hide-password">Hide</a>
           </p>
