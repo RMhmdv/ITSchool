@@ -32,13 +32,13 @@ header('Location: admin.php');
         <div class="left">
             <div class="admin__nav">
                 <div class="logo">
-                    <a class="logo__link" href="/">
+                    <a class="logo__link" href="index.html">
                         <img class="logo__img" src="images/icon/logo-admin.svg" alt="logo">
                     </a>
                 </div>
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a href="admin.html" class="nav__link">
+                        <a href="admin.php" class="nav__link">
                             <img class="nav__icon" src="images/icon/home.svg" alt="home">
                         </a>
                     </li>
