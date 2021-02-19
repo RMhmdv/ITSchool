@@ -141,40 +141,44 @@ header('Location: index.php');
                             <h3 class="card__title">Студентов</h3>
                             <span class="card__count">27</span>
                             <span class="card__procent">85% нових студентов</span>
-                        </div>
-                        <div class="card__image">
+                            <div class="card__image">
                             <img class="card__image-icon" src="images/icon/user.svg" alt="user">
                         </div>
+                        </div>
+                       
                     </div>
                     <div class="card__single">
                         <div class="card__info">
                             <h3 class="card__title">Продажы</h3>
                             <span class="card__count">250</span>
                             <span class="card__procent">45% нових продаж</span>
-                        </div>
-                        <div class="card__image">
+                            <div class="card__image">
                             <img class="card__image-icon" src="images/icon/cart.svg" alt="user">
                         </div>
+                        </div>
+                       
                     </div>
                     <div class="card__single">
                         <div class="card__info">
                             <h3 class="card__title">Комметарии</h3>
                             <span class="card__count">85</span>
                             <span class="card__procent">30% нових комментариев</span>
-                        </div>
-                        <div class="card__image">
+                            <div class="card__image">
                             <img class="card__image-icon" src="images/icon/comments.svg" alt="user">
                         </div>
+                        </div>
+                        
                     </div>
                     <div class="card__single">
                         <div class="card__info">
                             <h3 class="card__title">Рейтинг</h3>
                             <span class="card__count">4,9</span>
                             <span class="card__procent">85% нових оценок</span>
-                        </div>
-                        <div class="card__image">
+                            <div class="card__image">
                             <img class="card__image-icon" src="images/icon/star.svg" alt="user">
                         </div>
+                        </div>
+                        
                     </div>
                 </div>
                 <div class="chart__container">

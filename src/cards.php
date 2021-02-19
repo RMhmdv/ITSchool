@@ -147,10 +147,10 @@ header('Location: index.html');
 <?php while ($card = mysqli_fetch_assoc($db_data) ) {?>
 
           <div class="course__single">
-            <div class="course__name">
+            <div class="course__name course__name--cards">
               
               <div class="course__info">
-                <h3 class="course__info-name"><?php echo $card['title']?></h3>
+                <h3 class="course__info-name course__info-name--cards"><?php echo $card['title']?></h3>
               </div>
               <div class="course__info">
                 <span class="course__info-author"><?php echo $card['about']?></span>
@@ -158,7 +158,7 @@ header('Location: index.html');
             </div>
 
             <div class="course__action-btn">
-              <a class="btn btn--primary" href="editCard.php?id=<?php echo $card['id']?>">Изменить карточку</a>
+              <a class="btn btn--primary btn--primary-cards" href="editCard.php?id=<?php echo $card['id']?>">Изменить карточку</a>
             </div>
           </div>     
 <?}?>

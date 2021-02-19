@@ -47,6 +47,9 @@
         &:hover {
             background-color: darken($accent-color, 10%);
         }
+        &-cards {
+            width: 150px;
+        }
     }
     &--alert {
         background-color: $alert-color;
