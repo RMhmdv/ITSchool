@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Фев 18 2021 г., 21:29
+-- Время создания: Фев 19 2021 г., 10:40
 -- Версия сервера: 10.4.12-MariaDB
 -- Версия PHP: 7.4.5
 
@@ -20,6 +20,29 @@ SET time_zone = "+00:00";
 --
 -- База данных: `project`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `cards`
+--
+
+CREATE TABLE `cards` (
+  `id` int(10) NOT NULL,
+  `title` text NOT NULL,
+  `about` varchar(1000) NOT NULL,
+  `img` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `cards`
+--
+
+INSERT INTO `cards` (`id`, `title`, `about`, `img`) VALUES
+(1, 'Время', 'На рынке с 2010 года\r\n', 'images/icon1.svg'),
+(2, 'Количество', 'База насчитывает около 2000 разных курсов', 'images/icon2.svg'),
+(3, 'Митапы', 'Ежегодные митапы, встречи и конференции', 'images/icon3.svg'),
+(4, 'Студенты', '6000+ студентов, которые получили дополнительный навык', 'images/icon4.svg');
 
 -- --------------------------------------------------------
 
@@ -85,6 +108,12 @@ INSERT INTO `users` (`id`, `login`, `name`, `email`, `password`, `type`) VALUES
 --
 
 --
+-- Индексы таблицы `cards`
+--
+ALTER TABLE `cards`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Индексы таблицы `courses`
 --
 ALTER TABLE `courses`
@@ -99,6 +128,12 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT для сохранённых таблиц
 --
+
+--
+-- AUTO_INCREMENT для таблицы `cards`
+--
+ALTER TABLE `cards`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT для таблицы `courses`

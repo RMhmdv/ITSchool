@@ -28,7 +28,7 @@ module.exports = {
         php: 'build/php',
     },
     inject: {
-        html: 'build/index.html',
+        html: 'build/index.php',
         css: 'build/css/**/*.css',
         js: 'build/js/**/*.js',
         php: 'build/php/**/*.php'
