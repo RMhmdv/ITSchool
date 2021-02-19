@@ -1,3 +1,10 @@
+<?php 
+
+require_once('php/connect.php');
+$db_data = mysqli_query($connect, 'SELECT * FROM `cards`');
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,18 +38,9 @@
             </svg>
 
             <div class="theme-switch__control">
-              <input
-                class="theme-switch__toggle"
-                type="checkbox"
-                name="theme"
-                id="theme-switch-toggle"
-                aria-label="Переключить между тёмной и светлой темой"
-              />
-              <label
-                aria-hidden="true"
-                class="theme-switch__track"
-                for="theme-switch-toggle"
-              >
+              <input class="theme-switch__toggle" type="checkbox" name="theme" id="theme-switch-toggle"
+                aria-label="Переключить между тёмной и светлой темой" />
+              <label aria-hidden="true" class="theme-switch__track" for="theme-switch-toggle">
               </label>
               <div aria-hidden="true" class="theme-switch__marker"></div>
             </div>
@@ -52,7 +50,7 @@
             </svg>
           </div>
         </div>
-          <button class="header__btn button button--primary modal-btn">
+        <button class="header__btn button button--primary modal-btn">
           <a class="cd-signup" href="#0">Личный кабинет</a>
         </button>
       </div>
@@ -80,38 +78,16 @@
           <h3 class="section-description">О нас</h3>
           <h2 class="section-title about-title">Только факты</h2>
           <ul class="features__list enumeration">
+
+            <?php while ($card = mysqli_fetch_assoc($db_data) ) {?>
             <li class="card-item">
               <div class="card-img">
-                <img src="images/icon1.svg" alt="1 Icon" class="card-icon" />
+                <img src="<?php echo $card['img']?>" alt="1 Icon" class="card-icon" />
               </div>
-              <p class="card-title">Время</p>
-              <p class="card-text">На рынке с 2010 года</p>
+              <p class="card-title"><?php echo $card['title']?></p>
+              <p class="card-text"><?php echo $card['about']?></p>
             </li>
-            <li class="card-item">
-              <div class="card-img">
-                <img src="images/icon2.svg" alt="2 Icon" class="card-icon" />
-              </div>
-              <p class="card-title">Количество</p>
-              <p class="card-text">
-                База насчитывает около 2000 разных курсов
-              </p>
-            </li>
-            <li class="card-item">
-              <div class="card-img">
-                <img src="images/icon3.svg" alt="3 Icon" class="card-icon" />
-              </div>
-              <p class="card-title">Митапы</p>
-              <p class="card-text">Ежегодные митапы, встречи и конференции</p>
-            </li>
-            <li class="card-item">
-              <div class="card-img">
-                <img src="images/icon4.svg" alt="4 Icon" class="card-icon" />
-              </div>
-              <p class="card-title">Студенты</p>
-              <p class="card-text">
-                6000+ студентов, которые получили дополнительный навык
-              </p>
-            </li>
+            <?}?>
           </ul>
           <div class="buttons">
             <button class="button button--primary">Больше фактов</button>

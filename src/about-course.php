@@ -10,7 +10,7 @@ $login = $_SESSION['login'];
 $password = $_SESSION['password'];
 $db_userData = mysqli_query($connect, "SELECT * FROM `users` WHERE `login` = '$login' AND `password` = '$password'");
 } else {
-header('Location: index.html');
+header('Location: index.php');
 }
 ?>
 
@@ -37,7 +37,7 @@ header('Location: index.html');
         <div class="left">
             <div class="admin__nav">
                 <div class="logo">
-                    <a class="logo__link" href="index.html">
+                    <a class="logo__link" href="index.php">
                         <img class="logo__img" src="images/icon/logo-admin.svg" alt="logo">
                     </a>
                 </div>
@@ -85,7 +85,7 @@ header('Location: index.html');
             </div>
             <div class="burger-menu">
                 <div class="logo">
-                    <a class="burger-menu__link" href="/">
+                    <a class="burger-menu__link" href="index.php">
                         <img class="burger-menu__logo" src="images/icon/logo-admin.svg" alt="logo">
                     </a>
                 </div>
@@ -122,7 +122,7 @@ header('Location: index.html');
                     </li>
                 </ul>
                 <div class="logout">
-                    <a class="burger-menu__link" href="#">
+                    <a class="burger-menu__link" href="php/logout.php">
                         <img class="logout__img" src="images/icon/logout.svg" alt="logout">
                     </a>
                     <span class="burger-menu__item-name">Выйти</span>

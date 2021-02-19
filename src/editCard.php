@@ -6,8 +6,8 @@ session_start();
 if ($_SESSION['isAdmin']) {
     
 require_once('php/connect.php');
-$db_data = mysqli_query($connect, "SELECT * FROM `courses` where `id` = '$id'");
-$course = mysqli_fetch_assoc($db_data);
+$db_data = mysqli_query($connect, "SELECT * FROM `cards` where `id` = '$id'");
+$card = mysqli_fetch_assoc($db_data);
 } else {
 header('Location: admin.php');
 }
@@ -131,21 +131,15 @@ header('Location: admin.php');
             </div>
             <!-- burger-menu end -->
             <div class="course__container">
-                <h2 class="course__container-title">Редактировать курс</h2>
+                <h2 class="course__container-title">Редактировать карточку</h2>
                 <div class="form__container">
-                    <form class="form form-admin" action="php/editCourse.php" method="POST">
-                        <input type="text" name="id" hidden value="<?php echo $course['id']?>">
-                        <label class="form__label" for="name">Имя курса</label>
-                        <input class="form__input" name="title" data-validate-field="name" type="text" value="<?php echo $course['title']?>">
-
-                        <label class="form__label" for="author">Автор </label>
-                        <input class="form__input" name="author" data-validate-field="author" type="text" value="<?php echo $course['author']?>">
-
-                        <label class="form__label" for="">Длительность курса</label>
-                        <input class="form__input " type="text" data-validate-field="hour" placeholder="1ч 20мин" name="time" value="<?php echo $course['time']?>">
-                                          
-                        <label class="form__label" for="about">О курсе</label>
-                        <textarea class="form__input" type="text" name="about"><?php echo $course['about']?></textarea>
+                    <form class="form form-admin" action="php/editCard.php" method="POST">
+                        <input type="text" name="id" hidden value="<?php echo $card['id']?>">
+                        <label class="form__label" for="name">Имя карточки</label>
+                        <input class="form__input" name="title" data-validate-field="name" type="text" value="<?php echo $card['title']?>">
+     
+                        <label class="form__label" for="about">Описание</label>
+                        <textarea class="form__input" type="text" name="about"><?php echo $card['about']?></textarea>
                         <input class="btn btn--green-form-add" type="submit" value="Изменить"></input>
                     </form>
                 </div>

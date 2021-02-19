@@ -10,7 +10,7 @@ $login = $_SESSION['login'];
 $password = $_SESSION['password'];
 $db_userData = mysqli_query($connect, "SELECT * FROM `users` WHERE `login` = '$login' AND `password` = '$password'");
 } else {
-header('Location: index.html');
+header('Location: index.php');
 }
 ?>
 
@@ -38,7 +38,7 @@ header('Location: index.html');
       <!-- menu start -->
       <div class="admin__nav">
         <div class="logo">
-          <a class="logo__link" href="index.html">
+          <a class="logo__link" href="index.php">
             <img class="logo__img" src="images/icon/logo-admin.svg" alt="logo">
           </a>
         </div>
@@ -76,15 +76,6 @@ header('Location: index.html');
         </div>
       </div>
       <!-- menu end -->
-
-    </div>
-    <div class="right">
-
- <?php 
-        if ($_SESSION['isAdmin']){
-    ?>   
-      <h2 class="admin__container-title">Панель администратора</h2>
-      <span class="line"></span>
       <!-- burger-menu start -->
       <div class="burger-menu__button-wrap">
         <div class="burger-menu__button">
@@ -93,7 +84,7 @@ header('Location: index.html');
       </div>
       <div class="burger-menu">
         <div class="logo">
-          <a class="burger-menu__link" href="/">
+          <a class="burger-menu__link" href="index.php">
             <img class="burger-menu__logo" src="images/icon/logo-admin.svg" alt="logo">
           </a>
         </div>
@@ -130,18 +121,28 @@ header('Location: index.html');
           </li>
         </ul>
         <div class="logout">
-          <a class="burger-menu__link" href="#">
+          <a class="burger-menu__link" href="php/logout.php">
             <img class="logout__img" src="images/icon/logout.svg" alt="logout">
           </a>
           <span class="burger-menu__item-name">Выйти</span>
         </div>
       </div>
       <!-- burger-menu end -->
+    </div>
+    <div class="right">
+
+ <?php 
+        if ($_SESSION['isAdmin']){
+    ?>   
+      <h2 class="admin__container-title">Панель администратора</h2>
+      <span class="line"></span>
+
 
       <!-- course start -->
       <div class="course__container">
         <h2 class="course__container-title">Курсы</h2>
         <div class="course__add">
+        <a class="btn btn--primary" href="cards.php">Только факты</a>
           <a class="btn btn--green" href="add.php">Добавить курс</a>
         </div>
 
