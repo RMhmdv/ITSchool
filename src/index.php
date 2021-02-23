@@ -381,7 +381,7 @@ $db_data = mysqli_query($connect, 'SELECT * FROM `cards`');
       <a href="#0" class="cd-close-form">х</a>
     </div>
   </div>
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <!-- inject:js -->
   <script src="js/jquery-3.5.1.min.js"></script>
   <script src="js/theme.js"></script>
