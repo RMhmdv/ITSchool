@@ -26,17 +26,16 @@
     margin: 0;
     margin-bottom: 20px;
     border-bottom: 1px solid $secondary-bg-color;
-    align-items: start;
     width: 750px;
-    justify-content: start;    
+    text-align: left;
+
+     
 
     &-text {
         display: none;
         max-width: 400px;
         font-size: 15px;
         margin: 30px auto;
-        align-items: start;
-        justify-content: start; 
 
     }
 
@@ -55,8 +54,7 @@
     &-title{
         padding: 15px;
         display: block;
-        align-self: start;
-        justify-self: start;    
+        text-align: left;
 
         cursor: pointer;
 

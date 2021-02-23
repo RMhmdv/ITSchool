@@ -123,119 +123,119 @@ $db_data = mysqli_query($connect, 'SELECT * FROM `cards`');
   <section class="section feedback-section">
     <div class="container feedbacks-section__container">
           <div class="swiper-container">
-        <div class="swiper__description">
-          <h3 class="section-description">Отзывы</h3>
-          <h2 class="slider__title section-title">Что говорят студенты</h2>
-        </div>
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="slider__card">
-              <p class="card__text">
-                Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam.
-                Eu usu vidit tractatos, vero tractatos ius an, in mel diceret
-                persecuti.
-              </p>
-              <div class="card__picture">
-                <img class="card__img" src="images/stydent1.jpg" alt="Student1" />
+              <div class="swiper__description">
+                <h3 class="section-description">Отзывы</h3>
+                <h2 class="slider__title section-title">Что говорят студенты</h2>
               </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="slider__card">
-              <p class="card__text">
-                Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam.
-                Eu usu vidit tractatos, vero tractatos ius an, in mel diceret
-                persecuti.
-              </p>
-              <div class="card__picture">
-                <img class="card__img" src="images/stydent2_.jpg" alt="Student2" />
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="slider__card">
-              <p class="card__text">
-                Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam.
-                Eu usu vidit tractatos, vero tractatos ius an, in mel diceret
-                persecuti.
-              </p>
-              <div class="card__picture">
-                <img class="card__img" src="images/stydent3_.jpg" alt="Student3" />
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="slider__card">
-              <p class="card__text">
-                Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam.
-                Eu usu vidit tractatos, vero tractatos ius an, in mel diceret
-                persecuti.
-              </p>
-              <div class="card__picture">
-                <img class="card__img" src="images/stydent1.jpg" alt="Student1" />
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="slider__card">
-              <p class="card__text">
-                Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam.
-                Eu usu vidit tractatos, vero tractatos ius an, in mel diceret
-                persecuti.
-              </p>
-              <div class="card__picture">
-                <img class="card__img" src="images/stydent2_.jpg" alt="Student2" />
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="slider__card">
-              <p class="card__text">
-                Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam.
-                Eu usu vidit tractatos, vero tractatos ius an, in mel diceret
-                persecuti.
-              </p>
-              <div class="card__picture">
-                <img class="card__img" src="images/stydent3_.jpg" alt="Student3" />
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="slider__card">
-              <p class="card__text">
-                Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam.
-                Eu usu vidit tractatos, vero tractatos ius an, in mel diceret
-                persecuti.
-              </p>
-              <div class="card__picture">
-                <img class="card__img" src="images/stydent1.jpg" alt="Student1" />
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="slider__card">
-              <p class="card__text">
-                Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam.
-                Eu usu vidit tractatos, vero tractatos ius an, in mel diceret
-                persecuti.
-              </p>
-              <div class="card__picture">
-                <img class="card__img" src="images/stydent2_.jpg" alt="Student2" />
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="slider__card">
-              <p class="card__text">
-                Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam.
-                Eu usu vidit tractatos, vero tractatos ius an, in mel diceret
-                persecuti.
-              </p>
-              <div class="card__picture">
-                <img class="card__img" src="images/stydent3_.jpg" alt="Student3" />
-              </div>
-            </div>
-          </div>
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="slider__card">
+                    <p class="card__text">
+                      Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam.
+                      Eu usu vidit tractatos, vero tractatos ius an, in mel diceret
+                      persecuti.
+                    </p>
+                    <div class="card__picture">
+                      <img class="card__img" src="images/stydent1.jpg" alt="Student1" />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="slider__card">
+                    <p class="card__text">
+                      Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam.
+                      Eu usu vidit tractatos, vero tractatos ius an, in mel diceret
+                      persecuti.
+                    </p>
+                    <div class="card__picture">
+                      <img class="card__img" src="images/stydent2_.jpg" alt="Student2" />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="slider__card">
+                    <p class="card__text">
+                      Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam.
+                      Eu usu vidit tractatos, vero tractatos ius an, in mel diceret
+                      persecuti.
+                    </p>
+                    <div class="card__picture">
+                      <img class="card__img" src="images/stydent3_.jpg" alt="Student3" />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="slider__card">
+                    <p class="card__text">
+                      Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam.
+                      Eu usu vidit tractatos, vero tractatos ius an, in mel diceret
+                      persecuti.
+                    </p>
+                    <div class="card__picture">
+                      <img class="card__img" src="images/stydent1.jpg" alt="Student1" />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="slider__card">
+                    <p class="card__text">
+                      Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam.
+                      Eu usu vidit tractatos, vero tractatos ius an, in mel diceret
+                      persecuti.
+                    </p>
+                    <div class="card__picture">
+                      <img class="card__img" src="images/stydent2_.jpg" alt="Student2" />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="slider__card">
+                    <p class="card__text">
+                      Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam.
+                      Eu usu vidit tractatos, vero tractatos ius an, in mel diceret
+                      persecuti.
+                    </p>
+                    <div class="card__picture">
+                      <img class="card__img" src="images/stydent3_.jpg" alt="Student3" />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="slider__card">
+                    <p class="card__text">
+                      Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam.
+                      Eu usu vidit tractatos, vero tractatos ius an, in mel diceret
+                      persecuti.
+                    </p>
+                    <div class="card__picture">
+                      <img class="card__img" src="images/stydent1.jpg" alt="Student1" />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="slider__card">
+                    <p class="card__text">
+                      Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam.
+                      Eu usu vidit tractatos, vero tractatos ius an, in mel diceret
+                      persecuti.
+                    </p>
+                    <div class="card__picture">
+                      <img class="card__img" src="images/stydent2_.jpg" alt="Student2" />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="slider__card">
+                    <p class="card__text">
+                      Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam.
+                      Eu usu vidit tractatos, vero tractatos ius an, in mel diceret
+                      persecuti.
+                    </p>
+                    <div class="card__picture">
+                      <img class="card__img" src="images/stydent3_.jpg" alt="Student3" />
+                    </div>
+                  </div>
+                </div>
         </div>
       </div>
 
