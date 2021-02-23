@@ -1,10 +1,35 @@
 .feedback-section {
   background-color: $gray;
   min-height: 350px;
-  padding-top: 60px;
+  padding-top: 100px;
   padding-bottom: 60px;
   border-bottom: 1px solid $secondary-bg-color;
 }
+
+// .feedbacks-section__container {
+//   display: flex;
+// }
+
+.swiper {
+  &-container {
+    display: flex;
+  }
+
+  &__description {
+    // display: block;
+    color: $title-text-color2;
+    width: 40%;
+    text-align: left;
+    margin: 45px 40px 175px 200px;
+  }
+
+  &-wrapper {
+    // display: flex;
+    width: 60%;
+    height: 100%;
+  }
+}
+
 
 //! Slider slide
 .swiper-slide {
@@ -26,14 +51,10 @@
     }
   }
 
-//   &__title {
-//     font-style: normal;
-//     font-weight: 400;
-//     font-size: 30px;
-//     line-height: 37px;
-//     letter-spacing: 0.02em;
-//     color: $black;
-//     margin: 0 0 20px 0;
+  &__title {
+    font-size: 28px;
+    margin-top: 32px;
+  }
 
     // @media (max-width: 1179px) {
     //   font-size: 22px;
@@ -47,12 +68,14 @@
 
   &__card {
     position: relative;
-    width: 50%;
-    // max-width: 425px;
-    max-height: 175px;
+    // display: block;
+    max-width: 425px;
+    max-height: 260px;
+    padding: 41px 70px 53px 70px;
+    margin: 20px;
     background-color: $accent-color2;
     border: 1px solid $secondary-bg-color;
-    box-shadow: 0px 5px 50px 0px #F3F5FA;
+    box-shadow: $popular-box-shadow;
     position: relative;
 
 
@@ -64,35 +87,29 @@
 
 .card {
 
-    &__image {
-        position: absolute;
-        right: 0;
+    &__picture {
+      position: absolute;
+      right: 170px;
+      bottom: -30px;
+      width: 62px;
+      height: 62px;
+      z-index: 11;
+    }
+
+    &__img {
+      border-radius: 31px;
+    }
+
+    &__text {
+      font-family: $secondary-font-family;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: 0.03em;
+      color: $title-text-color4;
+      text-align: left;
+      width: 285px;
     }
 
 }
 
-.slider-new-price {
-  top: calc(40px * 2);
-
-  @media (max-width: 1179px) {
-    top: calc(25px * 2);
-  }
-}
-
-//! Swiper Container
-.swiper-container {
-  padding-bottom: 65px;
-}
-
-//! Pagination
-.swiper-pagination-bullet {
-  border-radius: 0;
-  height: 5px;
-  width: 30px;
-  background-color: $gray;
-  opacity: 1;
-
-  &-active {
-    background-color: $accent-color;
-  }
-}

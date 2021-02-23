@@ -122,53 +122,123 @@ $db_data = mysqli_query($connect, 'SELECT * FROM `cards`');
 
   <section class="section feedback-section">
     <div class="container feedbacks-section__container">
-      <div class="swiper-container">
+          <div class="swiper-container">
+        <div class="swiper__description">
+          <h3 class="section-description">Отзывы</h3>
+          <h2 class="slider__title section-title">Что говорят студенты</h2>
+        </div>
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <div class="slider__content">
-              <h3 class="section-description">Отзывы</h3>
-              <h2 class="slider__title section-title">Что говорят студенты</h2>
-            </div>
             <div class="slider__card">
               <p class="card__text">
                 Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam.
                 Eu usu vidit tractatos, vero tractatos ius an, in mel diceret
                 persecuti.
               </p>
-              <img class="card__image" src="images/stydent1.jpg" alt="Student1" />
+              <div class="card__picture">
+                <img class="card__img" src="images/stydent1.jpg" alt="Student1" />
+              </div>
             </div>
           </div>
           <div class="swiper-slide">
-            <div class="slider__content">
-              <h3 class="slider__desc section-description">Отзывы</h3>
-              <h2 class="slider__title section-title">Что говорят студенты</h2>
-            </div>
             <div class="slider__card">
               <p class="card__text">
                 Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam.
                 Eu usu vidit tractatos, vero tractatos ius an, in mel diceret
                 persecuti.
               </p>
-              <img class="card__image" src="images/stydent2_.jpg" alt="Student2" />
+              <div class="card__picture">
+                <img class="card__img" src="images/stydent2_.jpg" alt="Student2" />
+              </div>
             </div>
           </div>
           <div class="swiper-slide">
-            <div class="slider__content">
-              <h3 class="section-description">Отзывы</h3>
-              <h2 class="slider__title section-title">Что говорят студенты</h2>
-            </div>
             <div class="slider__card">
               <p class="card__text">
                 Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam.
                 Eu usu vidit tractatos, vero tractatos ius an, in mel diceret
                 persecuti.
               </p>
-              <img class="card__image" src="images/stydent3_.jpg" alt="Student3" />
+              <div class="card__picture">
+                <img class="card__img" src="images/stydent3_.jpg" alt="Student3" />
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="slider__card">
+              <p class="card__text">
+                Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam.
+                Eu usu vidit tractatos, vero tractatos ius an, in mel diceret
+                persecuti.
+              </p>
+              <div class="card__picture">
+                <img class="card__img" src="images/stydent1.jpg" alt="Student1" />
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="slider__card">
+              <p class="card__text">
+                Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam.
+                Eu usu vidit tractatos, vero tractatos ius an, in mel diceret
+                persecuti.
+              </p>
+              <div class="card__picture">
+                <img class="card__img" src="images/stydent2_.jpg" alt="Student2" />
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="slider__card">
+              <p class="card__text">
+                Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam.
+                Eu usu vidit tractatos, vero tractatos ius an, in mel diceret
+                persecuti.
+              </p>
+              <div class="card__picture">
+                <img class="card__img" src="images/stydent3_.jpg" alt="Student3" />
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="slider__card">
+              <p class="card__text">
+                Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam.
+                Eu usu vidit tractatos, vero tractatos ius an, in mel diceret
+                persecuti.
+              </p>
+              <div class="card__picture">
+                <img class="card__img" src="images/stydent1.jpg" alt="Student1" />
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="slider__card">
+              <p class="card__text">
+                Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam.
+                Eu usu vidit tractatos, vero tractatos ius an, in mel diceret
+                persecuti.
+              </p>
+              <div class="card__picture">
+                <img class="card__img" src="images/stydent2_.jpg" alt="Student2" />
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="slider__card">
+              <p class="card__text">
+                Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam.
+                Eu usu vidit tractatos, vero tractatos ius an, in mel diceret
+                persecuti.
+              </p>
+              <div class="card__picture">
+                <img class="card__img" src="images/stydent3_.jpg" alt="Student3" />
+              </div>
             </div>
           </div>
         </div>
-        <div class="swiper-pagination"></div>
       </div>
+
     </div>
   </section>
   <section class="section faq-section">
@@ -311,12 +381,16 @@ $db_data = mysqli_query($connect, 'SELECT * FROM `cards`');
       <a href="#0" class="cd-close-form">х</a>
     </div>
   </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
   <!-- inject:js -->
   <script src="js/jquery-3.5.1.min.js"></script>
   <script src="js/theme.js"></script>
   <script src="js/modal.js"></script>
   <script src="js/just-validate.min.js"></script>
+    <!-- Подключаем слайдер Slick -->
+  <script src="js/slick.min.js"></script>
+  <!-- Подключаем файл скриптов -->
+  <script src="js/scripts.js"></script>
   <!-- endinject -->
 </body>
 
