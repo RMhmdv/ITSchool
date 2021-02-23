@@ -122,7 +122,7 @@ $db_data = mysqli_query($connect, 'SELECT * FROM `cards`');
 
   <section class="section feedback-section">
     <div class="container feedbacks-section__container">
-          <div class="swiper-container">
+        <div class="swiper-container">
               <div class="swiper__description">
                 <h3 class="section-description">Отзывы</h3>
                 <h2 class="slider__title section-title">Что говорят студенты</h2>
@@ -236,9 +236,8 @@ $db_data = mysqli_query($connect, 'SELECT * FROM `cards`');
                     </div>
                   </div>
                 </div>
+              </div>
         </div>
-      </div>
-
     </div>
   </section>
   <section class="section faq-section">
