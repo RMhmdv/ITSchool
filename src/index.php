@@ -75,7 +75,7 @@ $db_data = mysqli_query($connect, 'SELECT * FROM `cards`');
       <div class="about-wrapper">
         <img src="images/clouds1.png" alt="1 Picture" class="picture1" />
         <div class="about-content">
-          <h3 class="section-description">О нас</h3>
+          <h3 class="section-description about-desc">О нас</h3>
           <h2 class="section-title about-title">Только факты</h2>
           <ul class="features__list enumeration">
 
@@ -243,7 +243,7 @@ $db_data = mysqli_query($connect, 'SELECT * FROM `cards`');
   <section class="section faq-section">
     <div class="container faq-section__container">
       <div class="faq-wrapper">
-        <h3 class="section-description">Faq</h3>
+        <h3 class="section-description faq-desc">Faq</h3>
         <h2 class="section-title faq-title">Список популярных вопросов</h2>
         <div class="item">
           <input type="radio" name="items" class="item-check" />
