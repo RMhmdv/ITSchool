@@ -33,7 +33,7 @@ $db_data = mysqli_query($connect, 'SELECT * FROM `cards`');
         <div class="toolbar">
           <!-- Разметка переключателя темы -->
           <div class="theme-switch">
-            <svg class="theme-switch__icon" role="img" aria-label="Иконка солнца">
+            <svg class="theme-switch__icon icon-sun" role="img" aria-label="Иконка солнца">
               <use href="./images/sprite.svg#sun"></use>
             </svg>
 
@@ -45,7 +45,7 @@ $db_data = mysqli_query($connect, 'SELECT * FROM `cards`');
               <div aria-hidden="true" class="theme-switch__marker"></div>
             </div>
 
-            <svg class="theme-switch__icon" aria-label="Иконка луны">
+            <svg class="theme-switch__icon icon-moon" aria-label="Иконка луны">
               <use href="./images/sprite.svg#moon"></use>
             </svg>
           </div>
