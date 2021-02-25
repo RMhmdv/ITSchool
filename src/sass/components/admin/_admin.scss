@@ -371,106 +371,83 @@
         justify-content: space-between;
         position: absolute;
         top: 0;
-        left: -100%;
-        z-index: 2;
-        background-color: $black;
-        min-width: 100%;
-        height: 50%;
-        overflow: hidden;
-        transition: all 0.3s ease-in-out;
-        &.active {
-            left: 0;
-            height: 640px;
-        }
-        &__button {
-            display: block;
-            position: relative;
-            width: 30px;
-            height: 20px;
-            z-index: 3;
-            &::after,
-            &::before {
-                content: '';
-                background-color: $black;
-                position: absolute;
-                width: 100%;
-                height: 3px;
-                border-radius: 8px;
-                transition: all 0.3s ease-in-out;
-            }
-            &::after {
-                right: 15px;
-                bottom: 0;
-            }
-            &::before {
-                right: 15px;
-                top: 0;
-            }
-            &-wrap {
-                display: inline-flex;
-                position: absolute;
-                right: 15px;
-                top: 35px;
-            }
-            &.active::before {
-                background-color: $white;
-                transform: rotate(45deg);
-                top: 9px;
-            }
-            &.active::after {
-                background-color: $white;
-                transform: rotate(-45deg);
-                bottom: 9px;
-            }
-        }
-        &__logo {
-            display: flex;
-            padding-top: 20px;
-            width: 40px;
-        }
-        &__line {
-            position: absolute;
-            background-color: $black;
-            width: 100%;
-            height: 3px;
-            z-index: 3;
-            right: 15px;
-            top: 9px;
-            border-radius: 8px;
-            transition: all 0.3s ease-in-out;
-            &.active {
-                background-color: $white;
-                transform: scale(0);
-            }
-        }
-        &__list {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            width: 100%;
-            margin: 0;
-            padding-left: 15px;
-            height: auto;
-        }
-        &__item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 40px;
-            &-name {
-                font-style: normal;
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 100%;
-                color: #FFFFFF;
-                padding-left: 40px;
-            }
-        }
-        &__link {
-            position: absolute;
-            left: 0;
-            width: 100%;
-            z-index: 2;
-            padding-left: 15px;
-        }
+      }
+
+      &-wrap {
+        display: inline-flex;
+        position: absolute;
+        right: 15px;
+        top: 35px;
+      }
+
+      &.active::before {
+        background-color: $white;
+        transform: rotate(45deg);
+        top: 9px;
+      }
+
+      &.active::after {
+        background-color: $white;
+        transform: rotate(-45deg);
+        bottom: 9px;
+      }
     }
+
+    &__logo {
+      display: flex;
+      width: 47px;
+      height: 57px;
+      padding-top: 20px;
+    }
+
+    &__line {
+      position: absolute;
+      background-color: $black;
+      width: 100%;
+      height: 3px;
+      z-index: 3;
+      right: 15px;
+      top: 9px;
+      border-radius: 8px;
+      transition: all 0.3s ease-in-out;
+
+      &.active {
+        background-color: $white;
+        transform: scale(0);
+      }
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      margin: 0;
+      padding-left: 15px;
+      height: auto;
+    }
+
+    &__item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 40px;
+
+      &-name {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 100%;
+        color: #FFFFFF;
+        padding-left: 40px;
+      }
+    }
+
+    &__link {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      z-index: 2;
+      padding-left: 15px;
+    }
+  }
 }
