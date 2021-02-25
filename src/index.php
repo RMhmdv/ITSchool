@@ -297,6 +297,50 @@ $db_data = mysqli_query($connect, 'SELECT * FROM `cards`');
       </div>
     </div>
   </section>
+  <section class="callback">
+        <div class="callback-container">
+            <div class="header">
+                <h2>Свяжись с нами</h2>
+            </div>
+            <form  class="validate" method="POST" action="php/mail-callback.php">
+                <div class="form-control">
+                    <label for="username">Ваше имя</label>
+                    <input type="text" placeholder="Андрей" 
+                    id="username" 
+                    name="username" 
+                    minLength="2"
+                    maxLength="25"
+                    pattern = "^[а-яёА-ЯЁ]+$" 
+                    title="Не коректное имя, имя должно написано кирилицей"
+                    required/>
+                    <span class="count-username"></span>
+                </div>
+                <div class="form-control">
+                    <label for="username">Ваш email</label>
+                    <input  type="email" placeholder="user@gmail.com" 
+                    id="email" 
+                    name="email"
+                    pattern="^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@(gmail\.com|ukr\.net|mail\.ru)+$" 
+                    title="Не коректний email допускаетсься только @gmail.com, @mail.ru, @ukr.net'"
+                    required/>
+                    <span class="count-email"></span>
+                </div>
+                <div class="form-control">
+                    <label for="username">Ваш телефон</label>
+                    <input type="tel" 
+                    placeholder="+380960000000" 
+                    id="phone" 
+                    name="phone"
+                    pattern="((\+)?\b(8|38)?(0[\d]{2}))([\d-]{5,8})([\d]{2})" 
+                    title="Не коректний телефон прим. +380680000000"
+                    required/>
+                    <span class="count-phone"></span>
+                </div>
+                <button class="form-callback--btn" type="submit">Отправить</button>
+            </form>
+        </div>
+
+    </section>
   <section class="section price-section">
     <div class="container price-section__container">
       <div class="price__content">
