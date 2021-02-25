@@ -41,7 +41,19 @@ body.dark-theme {
    & .slider__card {
        background-color: $bg-color;
    }
+
+  & .item {
+    color: $white; 
   
+    &-title::before {
+      color: inherit;
+    }     
+  }
+
+  & .item-check:checked  ~ .item-title {
+      color: $accent-color;     
+  } 
+
   & .text-footer {
     background-color: $accent-color4;
   }
