@@ -336,7 +336,7 @@ $db_data = mysqli_query($connect, 'SELECT * FROM `cards`');
                     required/>
                     <span class="count-phone"></span>
                 </div>
-                <button class="form-callback--btn" type="submit">Отправить</button>
+                <button class="button form-callback--btn button--secondary2" type="submit">Отправить</button>
             </form>
         </div>
 
@@ -393,7 +393,7 @@ $db_data = mysqli_query($connect, 'SELECT * FROM `cards`');
             <a href="#0" class="hide-password">Hide</a>
           </p>
           <p class="fieldset">
-            <input class="button cd-form__button button--secondary2 " type="submit" value="Войти" />
+            <input class="button cd-form__button button--secondary2  dark-theme--btn" type="submit" value="Войти" />
           </p>
         </form>
       </div>
@@ -423,7 +423,7 @@ $db_data = mysqli_query($connect, 'SELECT * FROM `cards`');
           </p>
 
           <p class="fieldset">
-            <input class="button cd-form__button button--secondary2" type="submit" value="Создать аккаунт" />
+            <input class="button cd-form__button button--secondary2 dark-theme--btn" type="submit" value="Создать аккаунт" />
           </p>
         </form>
       </div>
