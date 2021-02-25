@@ -299,10 +299,10 @@ $db_data = mysqli_query($connect, 'SELECT * FROM `cards`');
   </section>
   <section class="callback">
         <div class="callback-container">
-            <div class="header">
+            <div class="callback-header">
                 <h2>Свяжись с нами</h2>
             </div>
-            <form  class="validate" method="POST" action="php/mail-callback.php">
+            <form  class="validate" method="POST" >
                 <div class="form-control">
                     <label for="username">Ваше имя</label>
                     <input type="text" placeholder="Андрей" 

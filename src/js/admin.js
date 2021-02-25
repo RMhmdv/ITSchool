@@ -190,14 +190,8 @@ if (document.querySelector('.validate')) {
             xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
             xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
             xhr.setRequestHeader('Cache-Control', 'no-cache');
-
-
             xhr.send(body);
-
-
             xhr.onreadystatechange = function() {
-
-
                 if (xhr.readyState == 4) {
                     switch (xhr.status) {
                         case 200:
