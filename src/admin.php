@@ -129,11 +129,10 @@ header('Location: index.php');
       </div>
       <!-- burger-menu end -->
     </div>
-    <div class="right">
-
- <?php 
+  <?php 
         if ($_SESSION['isAdmin']){
     ?>   
+    <div class="right">
       <h2 class="admin__container-title">Панель администратора</h2>
       <span class="line"></span>
 
@@ -215,7 +214,6 @@ header('Location: index.php');
         <div class="my-course_progress">
 
           <img src="./images/user-page/progress.svg" alt="progress">
-          v
           <button class="first-button">Продолжить</button>
         </div>
       </div>
