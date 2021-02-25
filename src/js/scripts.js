@@ -25,29 +25,8 @@ $(document).ready(function(){
 	});
 });
 
-// const swiper = new Swiper('.swiper-wrapper', {
-//   pagination: {
-//     el: '.swiper-pagination',
-//   },
-// });
-
-
-// const d = new Swiper('.swiper-wrapper', {
-// pagination: {
-//   el: '.swiper-pagination'
-// },
-// breakpoints: {
-//   320: {
-//     slidesPerView: 1,
-//     spaceBetween: 200
-//   },
-//   690: {
-//     slidesPerView: 2,
-//     spaceBetween: 60
-//   },
-//   880: {
-//     slidesPerView: 1,
-//     spaceBetween: 50
-//   }
-// }
-// });
+$(document).ready(function() {
+	$(".item-check").click(function() {
+		$(this).parent().children(".item-text").slideToggle();
+	})
+});
