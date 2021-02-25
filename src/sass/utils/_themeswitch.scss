@@ -1,29 +1,35 @@
 body.light-theme {
   background-color: $white;
-  color: $title-text-color;    
+  color: $title-text-color;
 }
 
 body.dark-theme {
   background-color: $secondary-text-color;
   color: $white;
 
-  & .header,
-  & .footer,
-  & .feedback-section {
-    background-color: $secondary-bg-color;
-  }
-
   & .section-title,
-  & .section-description {
+  & .section-description,
+  & .item-check:checked~.item-title {
     color: $primary-text-color;
   }
-  & .section-text,
-  & .hero-title {
+
+  & .section-text {
     color: $bg-color;
   }
 
-  & .hero-section {
-    background-color: $accent-color4;
+  & .item-title,
+  & .item-text,
+  & .header__menu,
+  & .footer__menu {
+    color: $white;
+  }
+
+  & .hero-section,
+  & .price-section,
+  & .feedback-section,
+  & .header,
+  & .footer {
+    background-color: $secondary-text-color;
   }
 
   & .left-part {
@@ -34,18 +40,48 @@ body.dark-theme {
     background-color: $accent-color4;
   }
 
-   & .swiper-wrapper .slick-dots button { 
+  & .swiper-wrapper .slick-dots button {
     background-color: $white;
   }
 
-   & .slider__card {
-       background-color: $bg-color;
-   }
-  
-  & .text-footer {
-    background-color: $accent-color4;
+  & .slider__card {
+    background-color: $bg-color;
   }
 
+  & .hero-section,
+  & .about-section,
+  & .stats-section,
+  & .feedback-section,
+    {
+    border: 0;
+  }
+
+  & .stats-section .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  & .button--primary,
+  & .button--secondary,
+  & .button--price {
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+    border: 2px solid white;
+
+    &:hover {
+      text-decoration: none;
+      color: #2FDAC5 !important;
+      border: 2px solid #2FDAC5;
+    }
+  }
+
+  & .button--secondary2:hover {
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+    border: 2px solid white;
+  }
 }
 
 .toolbar {
@@ -103,7 +139,7 @@ body.dark-theme {
   height: 100%;
   color: transparent;
   user-select: none;
-  background-color:$accent-color;
+  background-color: $accent-color;
   border-radius: inherit;
   z-index: 1;
   cursor: pointer;
@@ -122,16 +158,15 @@ body.dark-theme {
   transition: transform 250ms var(--timing-function);
 }
 
-.theme-switch__toggle:checked + .theme-switch__track {
+.theme-switch__toggle:checked+.theme-switch__track {
   background-color: #d3d3d4;
 }
 
-.theme-switch__toggle:checked ~ .theme-switch__marker {
+.theme-switch__toggle:checked~.theme-switch__marker {
   transform: translateX(20px);
 }
 
-.theme-switch__toggle:focus + .theme-switch__track,
-.theme-switch__toggle:active + .theme-switch__track {
+.theme-switch__toggle:focus+.theme-switch__track,
+.theme-switch__toggle:active+.theme-switch__track {
   box-shadow: 0 0 0 3px #2196f3;
 }
-
