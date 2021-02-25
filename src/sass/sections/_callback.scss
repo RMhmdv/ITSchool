@@ -13,18 +13,16 @@
         max-width: 100%;
         padding: 0;
     }
-}
-
-.header {
-    border-bottom: 1px solid #f0f0f0;
-    background-color: $accent-color;
-    padding: 20px 40px;
-    width: 100%;
-}
-
-.header h2 {
-    color: $white;
-    margin: 0;
+    &-header {
+        border-bottom: 1px solid #f0f0f0;
+        background-color: $accent-color;
+        padding: 20px 40px;
+        width: 100%;
+        & h2 {
+            color: $white;
+            margin: 0;
+        }
+    }
 }
 
 .form {
