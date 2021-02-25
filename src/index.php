@@ -50,9 +50,11 @@ $db_data = mysqli_query($connect, 'SELECT * FROM `cards`');
             </svg>
           </div>
         </div>
-        <button class="header__btn button button--primary modal-btn">
-          <a class="cd-signup" href="#0">Личный кабинет</a>
-        </button>
+        <!-- <button class=""> -->
+        <div class="modal-btn">
+          <a class="header__btn button button--primary cd-signin" href="#0">Личный кабинет</a>
+        <!-- </button> -->
+        </div>
       </div>
     </div>
   </header>
@@ -84,15 +86,17 @@ $db_data = mysqli_query($connect, 'SELECT * FROM `cards`');
               <div class="card-img">
                 <img src="<?php echo $card['img']?>" alt="1 Icon" class="card-icon" />
               </div>
-              <p class="card-title"><?php echo $card['title']?></p>
+              <h3 class="card-title"><?php echo $card['title']?></h3>
               <p class="card-text"><?php echo $card['about']?></p>
             </li>
             <?}?>
           </ul>
           <div class="buttons">
-            <button class="button button--primary">Больше фактов</button>
+            <a class="button button--primary button--padding">Больше фактов</a>
             <p class="footer-text">или</p>
-            <button class="button button--secondary2">Присоединиться</button>
+            <div class="modal-btn">
+            <a class="button button--secondary2 button--padding cd-signup">Присоединиться</a>
+            </div>
           </div>
         </div>
         <img src="images/clouds2.png" alt="2 Picture" class="picture2" />
@@ -124,7 +128,7 @@ $db_data = mysqli_query($connect, 'SELECT * FROM `cards`');
     <div class="container feedbacks-section__container">
         <div class="swiper-container">
               <div class="swiper__description">
-                <h3 class="section-description">Отзывы</h3>
+                <span class="section-description">Отзывы</span>
                 <h2 class="slider__title section-title">Что говорят студенты</h2>
               </div>
               <div class="swiper-wrapper">
@@ -243,7 +247,7 @@ $db_data = mysqli_query($connect, 'SELECT * FROM `cards`');
   <section class="section faq-section">
     <div class="container faq-section__container">
       <div class="faq-wrapper">
-        <h3 class="section-description faq-desc">Faq</h3>
+        <span class="section-description faq-desc">Faq</span>
         <h2 class="section-title faq-title">Список популярных вопросов</h2>
         <div class="item">
           <input type="radio" name="items" class="item-check" />
@@ -316,9 +320,11 @@ $db_data = mysqli_query($connect, 'SELECT * FROM `cards`');
             <a href="#" class="header__menu-link">О нас</a>
           </nav>
         </div>
-        <button class="footer__btn button button--secondary modal-btn">
-          <a class="cd-signup" href="#0">Личный кабинет</a>
-        </button>
+        <!-- <button class="footer__btn button button--secondary modal-btn"> -->
+        <div class="footer__btn modal-btn">
+          <a class="button button--secondary modal-btn cd-signin" href="#0">Личный кабинет</a>
+        </div>
+        <!-- </button> -->
       </div>
       <p class="text-footer">Copyright © 2021 by Team3</p>
     </div>
@@ -338,12 +344,12 @@ $db_data = mysqli_query($connect, 'SELECT * FROM `cards`');
           </p>
           <p class="fieldset">
             <label class="image-replace cd-password" for="signin-password">Пароль</label>
-            <input class="fieldset-input" id="signin-password" name="password" type="text" placeholder="Пароль"
+            <input class="fieldset-input" id="signin-password" name="password" type="password" placeholder="Пароль"
               required />
             <a href="#0" class="hide-password">Hide</a>
           </p>
           <p class="fieldset">
-            <input class="fieldset-input" type="submit" value="Войти" />
+            <input class="button cd-form__button button--secondary2 " type="submit" value="Войти" />
           </p>
         </form>
       </div>
@@ -373,7 +379,7 @@ $db_data = mysqli_query($connect, 'SELECT * FROM `cards`');
           </p>
 
           <p class="fieldset">
-            <input class="fieldset-input" type="submit" value="Создать аккаунт" />
+            <input class="button cd-form__button button--secondary2" type="submit" value="Создать аккаунт" />
           </p>
         </form>
       </div>

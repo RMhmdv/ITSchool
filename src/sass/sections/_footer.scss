@@ -1,6 +1,7 @@
 .footer__container {
   text-align: left;
 }
+
 .footer {
   padding-top: 90px;
   padding-bottom: 90px;
@@ -15,7 +16,7 @@
     padding-bottom: 70px;
   }
 
-   &__wrapper {
+  &__wrapper {
     display: grid;
     grid-template-columns: 2fr 5fr 1fr;
     grid-template-areas: "footer-logo footer-menu footer-btn";
@@ -32,57 +33,70 @@
   &__menu {
     grid-area: footer-menu;
   }
+
   &__btn {
     grid-area: footer-btn;
+    text-shadow: none;
+    color: $accent-color2 !important;
+
+    &:hover {
+      color: black !important;
+    }
   }
 
   .menu {
 
-  &__nav {
-    @include dfcb();
-    justify-content: space-between;
+    &__nav {
+      @include dfcb();
+      justify-content: space-between;
+    }
+
+    @media (max-width: 1179px) {
+      width: 100%;
+    }
+
+    @media (max-width: 574px) {
+      display: none;
+    }
   }
 
-  @media (max-width: 1179px) {
-    width: 100%;
+
+  &__menu {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 30px;
+    font-family: $primary-font-family;
+    font-size: 12px;
+    color: inherit;
+
+    // @media (max-width: 1179px) {
+    //   width: 100%;
+    // }
+
+    @media (max-width: 574px) {
+      display: none;
+    }
   }
 
-  @media (max-width: 574px) {
-    display: none;
+  .header__menu-link {
+    color: inherit;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      color: $accent-color;
+    }
   }
-}
 
-
-&__menu {
-  display: grid;
-  grid-template-columns: repeat(4, auto);
-  grid-gap: 30px;
-  font-family: $primary-font-family;
-  font-size: 12px;
-  color: inherit;
-
-  // @media (max-width: 1179px) {
-  //   width: 100%;
-  // }
-
-  @media (max-width: 574px) {
-    display: none;
+  .current {
+    color: $accent-color;
   }
-}
 
-.header__menu-link {
-  color: inherit;
-  cursor: pointer;
-}
-.current {
-  color: $accent-color;
-}
-
-.cd-signup {
-  text-decoration: none;
-  color: inherit;
-  cursor: pointer;
-}
+  .cd-signup {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+  }
 }
 
 .text-footer {
@@ -92,4 +106,3 @@
   font-size: 12px;
   align-items: start;
 }
-
