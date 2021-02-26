@@ -149,73 +149,34 @@ if (document.querySelector('.validate')) {
             event.preventDefault();
             hasErrors.focus();
         } else {
-            // let xhr = new XMLHttpRequest();
-
-            // xhr.open("POST", "php/mail-callback.php", true);
-            // let formData = new FormData(fields);
-
-            // xhr.addEventListener("load", function() {
-            //     if (xhr.readyState == 4) {
-            //         switch (xhr.status) {
-            //             case 200:
-            //                 {
-            //                     console.log("Все харашо");
-            //                     form.reset();
-            //                     break;
-            //                 }
-            //             case 301:
-            //                 {
-            //                     console.log("Нас перенаправили");
-            //                     break;
-            //                 }
-            //             case 404:
-            //                 {
-            //                     console.log("Мы ничего не найшли");
-            //                     break;
-            //                 }
-            //             default:
-            //                 console.log("Ошибка!");
-            //                 break;
-            //         }
-            //     }
-            // })
-
-            // xhr.send(formData);
-            var xhr = new XMLHttpRequest(),
-
-                body = 'username=' + encodeURIComponent(fields.username.value) +
-                '&usermail=' + encodeURIComponent(fields.email.value) +
-                '&subject=' + encodeURIComponent(fields.phone.value);
-            xhr.open('POST', 'php/mail-callback.php', true);
-            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-            xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
-            xhr.setRequestHeader('Cache-Control', 'no-cache');
-            xhr.send(body);
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState == 4) {
-                    switch (xhr.status) {
-                        case 200:
-                            {
-                                console.log("Все харашо");
-                                forms.reset();
-                                break;
-                            }
-                        case 301:
-                            {
-                                console.log("Нас перенаправили");
-                                break;
-                            }
-                        case 404:
-                            {
-                                console.log("Мы ничего не найшли");
-                                break;
-                            }
-                        default:
-                            console.log("Ошибка!");
-                            break;
-                    }
+            let username = $(fields.username).val();
+            let email = $(fields.email).val();
+            let phone = $(fields.phone).val();
+            let dataString = 'name=' + username + '&email=' + email + '&phone=' + phone;
+            $.ajax({
+                type: "POST",
+                url: "php/mail-callback.php",
+                data: dataString,
+                success: function() {
+                    $('.callback-container').html("<div id='message'></div>");
+                    $('#message').html("<h2>Спасибо!</h2></h2>")
+                        .append("<p>Ми скоро свяжимся с вами</p>")
+                        .hide()
+                        .fadeIn(500, function() {
+                            $('#message').append("<img id='checkmark' src='https://img.icons8.com/emoji/48/000000/check-mark-emoji.png' />");
+                        });
+                },
+                error: function() {
+                    $('.callback-container').html("<div id='message'></div>");
+                    $('#message').html("<h2>Ошибка</h2></h2>")
+                        .append("<p>Что то пошло не так...</p>")
+                        .hide()
+                        .fadeIn(500, function() {
+                            $('#message').append("<img id='checkmark' src='https://img.icons8.com/officel/30/000000/cancel.png' />");
+                        });
                 }
-            }
+            });
+
 
         }
 
