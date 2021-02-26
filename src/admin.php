@@ -202,52 +202,49 @@ header('Location: index.php');
       </div>
 
       <div class="my-course">
-        <div class="my-course_name">
-
-          <img src="./images/user-page/spanish.svg" alt="spanish">
-
-          <div class="my-course_name-title">
+        <div class="my-course__name">
+          <img src="../images/user-page/spanish.svg" alt="spanish">
+          <div class="my-course__name--title">
             <h6>Испанский язык</h6>
             <p>Автор: Alejandro Velazquez</p>
           </div>
         </div>
-        <div class="my-course_progress">
 
-          <img src="./images/user-page/progress.svg" alt="progress">
+        <div class="my-course__progress">
+          <img src="../images/user-page/progress.svg" alt="progress">
           <button class="first-button">Продолжить</button>
         </div>
       </div>
 
-      <div class="profile-information-header">
-        <div class="profile-information-header__search">
+      <div class="header">
+        <div class="header__search">
           <form action="">
             <input type="submit" value="">
             <input type="search" placeholder="Введи название курса">
           </form>
         </div>
-        <div class="profile-information-header__prifile">
-          <div class="profile-information-header__prifile--dropdown">
 
-            <img src="./images/user-page/profile-img.png" onclick="myFunction()" class="dropbtn">
-            <div id="myDropdown" class="dropdown__content">
-              <a href="#"><img src="./images/user-page/profile.svg" alt="profile">
+        <div class="header__prifile">
+          <div class="header__prifile--dropdown">
+            <img class="dropbtn" src="./images/user-page/profile-img.png" onclick="myFunction()">
 
+            <div class="dropdown__content" id="myDropdown" >
+              <a href="#">
+                <img src="./images/user-page/profile.svg" alt="profile">
                 <p class="dropdown__content-text">
-                  <span>А</span><span>к</span><span>к</span><span>а</span><span>у</span><span>н</span><span>т</span>
+                  Аккаунт
                 </p>
               </a>
-
-              <a href="#"><img src="./images/user-page/settings.svg" alt="setting">
-
+              <a href="#">
+                <img src="./images/user-page/settings.svg" alt="setting">
                 <p class="dropdown__content-text">
-                  <span>Н</span><span>а</span><span>с</span><span>т</span><span>р</span><span>о</span><span>й</span><span>к</span><span>и</span>
+                  Настройки
                 </p>
               </a>
-
-              <a href="#"><img src="./images/user-page/log-out.svg" alt="log-out">
-
+              <a href="#">
+                <img src="./images/user-page/log-out.svg" alt="log-out">
                 <p class="dropdown__content-text">
-                  <span>В</span><span>ы</span><span>й</span><span>т</span><span>и</span>
+                  Выйти
                 </p>
               </a>
             </div>
@@ -255,24 +252,24 @@ header('Location: index.php');
         </div>
       </div>
 
-      <div class="profile-information-progress">
-        <div class="profile-information-progress__ready">
-          <h3 class="profile-information-progress__count">11</h3>
-          <p class="profile-information-progress__name">Завершено курсов</p>
+      <div class="progress">
+        <div class="progress__ready">
+          <h3 class="progress__count">11</h3>
+          <p class="progress__name">Завершено курсов</p>
         </div>
-        <div class="profile-information-progress__active">
-          <h3 class="profile-information-progress__count">4</h3>
-          <p class="profile-information-progress__name">Активных курсов</p>
+        <div class="progress__active">
+          <h3 class="progress__count">4</h3>
+          <p class="progress__name">Активных курсов</p>
         </div>
       </div>
 
-      <div class="profile-information-statistic">
-        <h3 class="profile-information-statistic__title">
+      <div class="statistic">
+        <h3 class="statistic__title">
           Ваша статистика
         </h3>
-        <h4 class="profile-information-statistic__subtitle">Ваша статистка за неделю</h4>
+        <h4 class="statistic__subtitle">Ваша статистка за неделю</h4>
 
-        <img class="profile-information-statistic__image" src="./images/user-page/statistics.svg" alt="statistics">
+        <img class="statistic__image" src="./images/user-page/statistics.svg" alt="statistics">
 
       </div>
 
@@ -285,7 +282,7 @@ header('Location: index.php');
             <button class="first-button">Подписка</button>
           </div>
 
-          <img src="./images/user-page/more-curses-img.svg" alt="more-curses">
+          <img src="../images/user-page/more-curses-img.svg" alt="more-curses">
 
         </div>
       </div>
