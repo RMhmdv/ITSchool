@@ -302,7 +302,8 @@ $db_data = mysqli_query($connect, 'SELECT * FROM `cards`');
             <div class="callback-header">
                 <h2>Свяжись с нами</h2>
             </div>
-            <form  class="validate" method="POST" >
+            <iframe name="hiddenFrame" width="0" height="0" border="0" style="display: none;"></iframe>
+            <form  class="validate" method="POST" target="hiddenFrame" action="php/mail-callback.php">
                 <div class="form-control">
                     <label for="username">Ваше имя</label>
                     <input type="text" placeholder="Андрей" 
