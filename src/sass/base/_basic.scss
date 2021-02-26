@@ -59,6 +59,8 @@ p {
 
 .section {
 
+  // outline: 1px solid teal;
+  // // color: inherit;
   &-title {
     color: $title-text-color2;
     font-weight: 700;
@@ -88,18 +90,22 @@ p {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-    width: 100%;
-    @include for-size(tablet) {
-      padding-left: 20px;
-      padding-right: 20px;
-      width: 768px;
-    }
-    @include for-size(desktop) {
-      padding-left: 30px;
-      padding-right: 30px;
-      width: 1200px;
-    }
-  
+  //   // width: 100%;
+  //   @include for-size(tablet) {
+  //     // padding-left: 20px;
+  //     // padding-right: 20px;
+  //     width: 768px;
+  //   }
+  //   @include for-size(desktop) {
+  //     // padding-left: 30px;
+  //     // padding-right: 30px;
+  //     width: 1200px;
+  //   }
+  // }
+  // //class is-hidden for buttons etc.
+  // .is-hidden {
+  //   display: none;
+  // 
 }
 
 [data-scroll] {

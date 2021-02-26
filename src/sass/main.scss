@@ -4,10 +4,9 @@
 
 @import './base/normalize.scss';
 @import './utils/vars';
+@import './base/basic';
 @import './utils/mixin';
 @import './utils/fonts';
-@import './base/basic';
-
 @import './utils/themeswitch';
 @import './components/button';
 @import './sections/header';
