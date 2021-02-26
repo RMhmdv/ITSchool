@@ -88,6 +88,9 @@ body.dark-theme {
   & .dark-theme--btn,
   & .form-callback--btn {
     transition: all 0.5s ease-in-out;
+    color: $accent-color2;
+    background-color: transparent;
+    border: 2px solid $accent-color2;
 
     &:hover {
       background-color: transparent;
@@ -95,6 +98,35 @@ body.dark-theme {
       color: $accent-color;
     }
   }
+
+  & .validate,
+  & .callback-header,
+  & .cd-form,
+  & .cd-user-modal-container .cd-switcher a.selected,
+  & .callback-container {
+    background-color: $primary-text-color;
+    border-bottom: none;
+    color: $accent-color2;
+  }
+
+  & .cd-switcher {
+    margin-bottom: 0;
+  }
+
+  & .error-message {
+    color: #d30404;
+  }
+
+  & #username.error,
+  & #email.error,
+  & #phone.error {
+    border-color: #d30404;
+  }
+
+  & .cd-user-modal-container {
+    background-color: transparent;
+  }
+
 }
 
 .toolbar {
