@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Фев 19 2021 г., 10:40
+-- Время создания: Фев 26 2021 г., 13:16
 -- Версия сервера: 10.4.12-MariaDB
 -- Версия PHP: 7.4.5
 
@@ -93,15 +93,11 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `login`, `name`, `email`, `password`, `type`) VALUES
-(1, 'admin', '', 'ren.kol.t@gmail.com', 'admin', 'admin'),
-(2, 'user', '', 'user@g.com', 'user', 'user'),
-(3, 'arina', '', 'ar@g.com', 'arina', 'user'),
-(4, 'test', '', '', 'test', 'user'),
-(5, 'test1', '', '', 'test1', 'user'),
-(6, 'a', '', '', 'a', 'user'),
-(7, 'irene', 'Irene', 'lala@g.com', '123', 'user'),
-(8, 'gggggggg', 'gggggggggg', 'ggg@g.com', 'ejgfdkjdfkjdfkjdf', 'user'),
-(9, 'grdfvx', 'getdf', 'fsdds@g.com', 'khjgfsvvdf,kjgdefk,jndgf', 'user');
+(1, 'admin', 'admin', 'ren.kol.t@gmail.com', 'admin', 'admin'),
+(2, 'user', 'user', 'user@g.com', 'user', 'user'),
+(3, 'arina', 'Arina', 'ar@g.com', 'arina', 'user'),
+(4, 'test', 'Test', 'test@gmail.com', 'test', 'user'),
+(7, 'irene', 'Irene', 'lala@g.com', '123', 'user');
 
 --
 -- Индексы сохранённых таблиц
