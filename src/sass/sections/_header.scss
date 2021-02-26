@@ -7,26 +7,16 @@
 
   &__wrapper {
     display: grid;
-    grid-template-columns: 3fr 2fr 3fr;
+    grid-template-columns: 2fr 5fr 1fr;
     grid-template-areas: "header-logo header-menu header-btn";
     align-items: center;
     color: $title-text-color;
-
-    @include for-size(tablet) {
-      grid-template-columns: 2fr 4fr 2fr;
-      width: 100%; 
-    }
-
-    @include for-size(desktop) {
-      grid-template-columns: 2fr 5fr 1fr;
-    }
-    
-    
 
   }
 
   &__logo {
     grid-area: header-logo;
+    margin-right: 20px;
   }
 
   &__menu {
@@ -66,9 +56,9 @@
 
 
 
-    @media (max-width: 1179px) {
-      width: 100%;
-    }
+    // @media (max-width: 1179px) {
+    //   width: 100%;
+    // }
 
     @media (max-width: 574px) {
       display: none;
