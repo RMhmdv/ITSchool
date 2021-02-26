@@ -14,6 +14,10 @@ $db_data = mysqli_query($connect, 'SELECT * FROM `cards`');
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>IT School</title>
   <link rel="shortcut icon" href="./images/user-page/logo.svg" type="img/svg">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 
@@ -77,8 +81,8 @@ $db_data = mysqli_query($connect, 'SELECT * FROM `cards`');
       <div class="about-wrapper">
         <img src="images/clouds1.png" alt="1 Picture" class="picture1" />
         <div class="about-content">
-          <h3 class="section-description about-desc">О нас</h3>
-          <h2 class="section-title about-title">Только факты</h2>
+          <h3 class="section-description about-desc animate__animated animate__backInRight animate__delay-2s" data-scroll>О нас</h3>
+          <h2 class="section-title about-title animate__animated animate__fadeInDown animate__delay-2s" data-scroll>Только факты</h2>
           <ul class="features__list enumeration">
 
             <?php while ($card = mysqli_fetch_assoc($db_data) ) {?>
@@ -106,14 +110,14 @@ $db_data = mysqli_query($connect, 'SELECT * FROM `cards`');
   <section class="section stats-section">
     <div class="container stats-section__container">
       <div class="stats-wrapper">
-        <div class="left-part">
+        <div class="left-part animate__animated animate__backInLeft animate__delay-2s" data-scroll>
           <div class="stats__card">
             <img src="images/clock.svg" alt="Stats Picture1" class="stats-img" />
             <p class="stats-numbers">97%</p>
             <p class="stats-text">Успешно пройденных курсов</p>
           </div>
         </div>
-        <div class="right-part">
+        <div class="right-part animate__animated animate__backInRight animate__delay-3s" data-scroll>
           <div class="stats__card even">
             <img src="images/group.svg" alt="Stats Picture1" class="stats-img" />
             <p class="stats-numbers">250</p>
@@ -298,7 +302,7 @@ $db_data = mysqli_query($connect, 'SELECT * FROM `cards`');
     </div>
   </section>
   <section class="callback">
-        <div class="callback-container">
+        <div class="callback-container animate__animated animate__fadeInDown animate__delay-2s" data-scroll>
             <div class="callback-header">
                 <h2>Свяжись с нами</h2>
             </div>
@@ -439,6 +443,13 @@ $db_data = mysqli_query($connect, 'SELECT * FROM `cards`');
   <script src="js/just-validate.min.js"></script>
     <!-- Подключаем слайдер Slick -->
   <script src="js/slick.min.js"></script>
+    <!-- Подключаем ScrollOut -->
+  <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+<script>
+    ScrollOut({
+  /* options */
+});
+</script>
   <!-- Подключаем файл скриптов -->
   <script src="js/scripts.js"></script>
   <!-- endinject -->
