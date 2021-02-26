@@ -4,14 +4,20 @@
 
   background-color: $accent-color2;
   font-weight: 500;
-  //   text-shadow: 0px 0px 5px #E6E6E6;
 
   &__wrapper {
     display: grid;
-    grid-template-columns: 2fr 5fr 1fr;
+    grid-template-columns: 3fr 2fr 3fr;
     grid-template-areas: "header-logo header-menu header-btn";
     align-items: center;
     color: $title-text-color;
+
+  @include for-size(tablet) {
+    grid-template-columns: 3fr 4fr 1fr;
+  }
+  @include for-size(desktop) {
+    grid-template-columns: 2fr 6fr 1fr;
+  }
 
   }
 
@@ -28,19 +34,17 @@
   }
 
   .menu {
-
+    
     &__nav {
-      @include dfcb();
-      justify-content: space-between;
+      @include dfcb();       
+      display: none;   
     }
-
-    @media (max-width: 1179px) {
-      width: 100%;
+    @include for-size(tablet) {
+      width: 100%; 
     }
-
-    @media (max-width: 574px) {
-      display: none;
-    }
+    // @include for-size(desktop) {
+    // grid-template-columns: 2fr 6fr 1fr;   
+    // }
   }
 
 
