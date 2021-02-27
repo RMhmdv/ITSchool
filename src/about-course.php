@@ -24,7 +24,7 @@ header('Location: index.php');
     <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css"> -->
     <link rel="shortcut icon" href="./images/user-page/logo.svg" type="img/svg">
     <link rel="stylesheet" href="css/styles.css">
-    <title>Admin</title>
+    <title>О курсе</title>
 </head>
 
 <body>
@@ -76,7 +76,7 @@ header('Location: index.php');
             </div>
         </div>
         <div class="right">
-            <h2 class="admin__container-title">Панель администратора</h2>
+            <h2 class="admin__container-title">О курсе</h2>
             <!-- burger-menu start -->
             <div class="burger-menu__button-wrap">
                 <div class="burger-menu__button">
