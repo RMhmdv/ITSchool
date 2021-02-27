@@ -35,10 +35,10 @@ header('Location: index.php');
   <section class="admin__container">
 
   
+  
   <?php 
         if ($_SESSION['isAdmin']){
-    ?>   
-
+    ?> 
 <div class="left">
       <!-- menu start -->
       <div class="admin__nav">
@@ -133,7 +133,7 @@ header('Location: index.php');
         </div>
       </div>
       <!-- burger-menu end -->
-    </div>
+</div>
 
     <div class="right">
       <h2 class="admin__container-title">Панель администратора</h2>
@@ -191,7 +191,7 @@ header('Location: index.php');
   </section>
 <? } else {?> 
 
-  <section class="main-navigation">
+<section class="main-navigation">
 
             <nav class="main-navigation__nav">
                 <div class="main-navigation__logo"><a href="#"><img src="images/user-page/logo.svg" alt="logo"
@@ -230,8 +230,8 @@ header('Location: index.php');
                     </a>
                 </div>
             </nav>
-        </section>
-        <div class="hamburger-menu">
+</section> 
+<div class="hamburger-menu">
             <input id="menu__toggle" type="checkbox" />
             <label class="menu__btn" for="menu__toggle">
                 <span></span>
@@ -265,21 +265,18 @@ header('Location: index.php');
                         <p>Выйти</p>
                     </a></li>
             </ul>
-        </div>
+</div>
 
 
     <section class="content-wrapper">
 
       <div class="main-header">
         <div class="main-header__text">
-          <h1>Привет, <?php $user = mysqli_fetch_assoc($db_userData);
-        echo $user['name'] ?>!</h1>
+          <h1>Привет, <?php $user = mysqli_fetch_assoc($db_userData); echo $user['name'] ?>!</h1>
           <h5>Рад, что ты снова зашел</h5>
         </div>
         <div class="main-header__image">
-
-          <img src="images/user-page/header-img.svg" alt="Hi!">
-
+            <img src="images/user-page/header-img.svg" alt="Hi!">
         </div>
       </div>
 
@@ -294,11 +291,11 @@ header('Location: index.php');
 
         <div class="my-course__progress">
           <img src="images/user-page/progress.svg" alt="progress">
-          <button class="first-button">Продолжить</button>
+          <button class="button button--secondary2">Продолжить</button>
         </div>
       </div>
 
-      <div class="header">
+    <div class="header">
         <div class="header__search">
           <form action="">
             <input type="submit" value="">
@@ -307,41 +304,30 @@ header('Location: index.php');
         </div>
 
         <div class="header__prifile">
-          
-        <a href="#openModal" class="open_modal"><img src="images/user-page/profile-img.png"></a>
-
-        <div id="openModal" class="modal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <a href="#close" title="Close" class="close">×</a>
+            <a href="#openModal" class="open_modal"><img src="images/user-page/profile-img.png"></a>
+            <div id="openModal" class="modal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <a href="#close" title="Close" class="close">×</a>
+                        </div>
+                        <div class="modal-body">
+                            <a href="#">
+                            <img src="images/user-page/profile.svg" alt="profile">
+                            <p class="modal-body-text">Аккаунт</p></a>
+                            <a href="#">
+                                <img src="images/user-page/settings.svg" alt="setting">
+                                <p class="modal-body-text">Настройки</p></a>
+                            <a  href="php/logout.php">
+                                <img src="images/user-page/log-out.svg" alt="log-out">
+                                <p class="modal-body-text">Выйти</p></a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="modal-body">
-            <a href="#">
-                <img src="images/user-page/profile.svg" alt="profile">
-                <p class="modal-body-text">
-                  Аккаунт
-                </p>
-              </a>
-              <a href="#">
-                <img src="images/user-page/settings.svg" alt="setting">
-                <p class="modal-body-text">
-                  Настройки
-                </p>
-              </a>
-              <a  href="php/logout.php">
-                <img src="images/user-page/log-out.svg" alt="log-out">
-                <p class="modal-body-text">
-                  Выйти
-                </p>
-              </a>
-            </div>
-        </div>
-    </div>
-</div>
             
         </div>
-      </div>
+    </div>
 
       <div class="progress">
         <div class="progress__ready">
@@ -370,7 +356,7 @@ header('Location: index.php');
           <div class="more-curces__content-text">
             <p>Открой доступ ко всей базе курсов за $
               9,99 / месяц</p>
-            <button class="first-button">Подписка</button>
+            <button class="button button--secondary2">Подписка</button>
           </div>
 
           <img src="images/user-page/more-curses-img.svg" alt="more-curses">
@@ -378,16 +364,17 @@ header('Location: index.php');
         </div>
       </div>
 
-      <div class="filter-wrapper">
+    <div class="filter-wrapper">
         <h3 class="filter-wrapper__title">Курсы</h3>
 
-        <a href="#0" class="filter filter-wrapper__link" data-filter="all" data-sort="default">Все курсы
-        </a>
-        <a href="#0" class="filter filter-wrapper__link" data-sort="time:desc">Новые </a>
-        <a href="#0" class="filter filter-wrapper__link" data-sort="rating:desc"> Самые популярные</a>
+    <div class="filter-wrapper__mix">
+        <a href="#0" class="filter filter-wrapper__link" data-filter="all" data-sort="default">Все курсы</a>
+        <a href="#0" class="filter filter-wrapper__link" data-sort="time:desc">Новые</a>
+        <a href="#0" class="filter filter-wrapper__link" data-sort="rating:desc">Самые популярные</a>
+    </div>
 
-        <div class="filter-wrapper__container">
-          <?php while ($course = mysqli_fetch_assoc($db_data) ) {?>
+        <div class="filter-wrapper__container course__wrap">
+        <?php while ($course = mysqli_fetch_assoc($db_data) ) {?>
           <div class="mix filter-wrapper__container-element" data-time="<?php echo $course['created_at']?>"
             data-rating="<?php echo $course['rating']?>">
             <div class="filter-wrapper__container-element--name">
@@ -419,8 +406,9 @@ header('Location: index.php');
               </div>
             </div>
           </div>
-          <?}?>
-
+        <?}?>
+    </div>
+</div>
 
     </section>
     

@@ -435,6 +435,8 @@ $db_data = mysqli_query($connect, 'SELECT * FROM `cards`');
       <a href="#0" class="cd-close-form">х</a>
     </div>
   </div>
+  
+  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <!-- inject:js -->
   <script src="js/jquery-3.5.1.min.js"></script>
@@ -445,14 +447,15 @@ $db_data = mysqli_query($connect, 'SELECT * FROM `cards`');
   <script src="js/slick.min.js"></script>
     <!-- Подключаем ScrollOut -->
   <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
-<script>
+      <script>
     ScrollOut({
-  /* options */
-});
-</script>
+     /* options */
+    });
+  </script>
   <!-- Подключаем файл скриптов -->
   <script src="js/scripts.js"></script>
   <!-- endinject -->
+
 </body>
 
 </html>
