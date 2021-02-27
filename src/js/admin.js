@@ -209,9 +209,9 @@ document.addEventListener('DOMContentLoaded', function() {
             type: 'line',
 
             data: {
-                labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                labels: ['Пон', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
                 datasets: [{
-                    label: 'Rating',
+                    label: 'Рейтинг',
                     borderColor: 'rgb(255, 99, 132)',
                     data: [5, 2, 4, 2, 5, 3, 4]
                 }]

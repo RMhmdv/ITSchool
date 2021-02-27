@@ -157,7 +157,8 @@ header('Location: index.php');
 <?php while ($course = mysqli_fetch_assoc($db_data) ) {?>
 
           <div class="mix course__single " data-time="<?php echo $course['created_at']?>" data-rating="<?php echo $course['rating']?>">
-            <div class="course__name">
+          
+           <div class="course__name">
               <div class="course__logo">
                 <img class="course__logo-img" src="<?php echo $course['img']?>" alt="course logo">
               </div>
@@ -166,11 +167,12 @@ header('Location: index.php');
                 <span class="course__info-author">Автор: <?php echo $course['author']?></span>
               </div>
             </div>
-
             <div class="course__time">
               <img class="course__time-icon" src="images/icon/clock.svg" alt="icon">
               <span class="course__time-duration"><?php echo $course['time']?></span>
             </div>
+           
+ 
             <div class="course__rating">
               <img class="course__rating-icon" src="images/icon/rating.svg" alt="rating-icon">
               <span class="course__rating-score"><?php echo $course['rating']?></span>
