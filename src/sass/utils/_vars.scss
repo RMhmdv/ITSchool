@@ -42,3 +42,8 @@ $button-color: #0c0b0b;
 $button-hover-color: #2fdac5;
 $menu-background-color: #171717;
 $text-color: #171717;
+$lineH: 4px;
+$linesGap: 8px;
+$speed: 0.6s;
+$delay: ($speed * .5);
+$easing: cubic-bezier(.55,0,.1,1);
