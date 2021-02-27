@@ -54,20 +54,20 @@ p {
     list-style: none;
 }
 
-.section {
-    // outline: 1px solid teal;
-    // // color: inherit;
-    &-title {
-        font-size: 24px;
-        color: $title-text-color;
-    }
-    &-text {
-        font-size: 15px;
-    }
-    &-description {
-        font-size: 10px;
-    }
-}
+// .section {
+//     // outline: 1px solid teal;
+//     // // color: inherit;
+//     &-title {
+//         font-size: 24px;
+//         color: $title-text-color;
+//     }
+//     &-text {
+//         font-size: 15px;
+//     }
+//     &-description {
+//         font-size: 10px;
+//     }
+// }
 
 .container {
     display: flex;
